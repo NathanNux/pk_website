@@ -5,6 +5,7 @@ import Nav from "@/components/common/Navbar/nav";
 import Transition from "@/components/common/Transition";
 import { LoadProvider } from "@/context/globalContext";
 import "@/styles/globals.scss";
+import "@/styles/styles.scss"; 
 import { AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
 import { useRouter } from "next/router";
