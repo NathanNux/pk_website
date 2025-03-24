@@ -1,13 +1,11 @@
 import Head from "next/head";
 import PreLoader from "@/components/PreLoader";
-import BackgroundGradiet from "@/components/common/Backgorund";
 import MainIntro from "@/components/Main/Intro";
 import WhatIDo from "@/components/Main/WhatIDo";
 import Trafika from "@/components/Main/Trafika";
 import Contact from "@/components/Main/Contact";
 import { useGlobalContext } from "@/context/globalContext";
 import { AnimatePresence } from "framer-motion";
-import styles from "@/styles/styles.scss";
 
 export default function Home() {
   const { firstLoad } = useGlobalContext();

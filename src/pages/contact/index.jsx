@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "@/styles/styles.scss";
 import Contact from "@/components/Main/Contact";
 import PreLoader from "@/components/PreLoader";
 import { AnimatePresence } from "framer-motion";

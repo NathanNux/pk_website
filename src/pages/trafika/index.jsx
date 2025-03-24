@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "@/styles/styles.scss";
 
 import BackgroundGradiet from "@/components/common/Backgorund";
 
