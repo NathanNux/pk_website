@@ -1,0 +1,93 @@
+.nav{
+    position: fixed;
+    width: 5vw;
+    height: 85vh;
+    top: 2.5vh;
+    right: 0vw;
+    z-index: 60;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+    z-index: 60;
+
+    .nav__item{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        a{
+            width: 50%;
+            height: fit-content;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: row;
+            text-decoration: none;
+
+            h3{
+                margin: 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+                position: relative;
+                z-index: 2;
+                pointer-events: all;
+
+                .span{
+                    display: inline-block;
+                    height: 1.5rem;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    color: var(--logo-color-on-dark);
+                    text-transform: uppercase;
+                    margin: 0;
+                    z-index: 2;
+                }
+
+                &:nth-of-type(2){
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                    pointer-events: none;
+                    .span{
+                        color: #ff1d28 !important;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Add this class when on light backgrounds */
+.nav__item--on-light a {
+    h3{
+        .span{
+            color: var(--logo-color-on-light);
+        }   
+    }
+}
+
+/* Your existing logo style */
+.logo--on-light a {
+    color: var(--logo-color-on-light);
+}
+
+// Add these new rules
+.nav__item h3.active-route {
+    color: #ff1d28 !important;
+}
+
+.nav__item h3 .span.active-route-span {
+    color: #ff1d28 !important;
+}
+

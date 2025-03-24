@@ -1,0 +1,40 @@
+.trafika__main__textSection{
+    position: relative;
+    width: 100vw;
+    height: 375vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 5vw 30vh 5vw;
+    z-index: 2;
+
+    .trafika__main__textSection__text{
+        position: sticky;
+        top: 10vh; // Adjusted to position for upward movement
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+        overflow: hidden;
+        perspective: 1500px; // Increased for more dramatic effect
+        transform-style: preserve-3d;
+
+        h3{
+            font-size: 10rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            margin: 0;
+            transform-origin: center bottom; // Changed to center bottom
+            will-change: transform, opacity;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+            transform: translateZ(0); // Initial position
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15)); // Add shadow for depth
+            
+        }
+    }
+}

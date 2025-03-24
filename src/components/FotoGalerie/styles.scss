@@ -1,0 +1,166 @@
+.fotoGalerie{
+    width: 100vw;
+    height: 600vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25vh 5vw 20vh 5vw;
+    background-color: #EDEFF3;
+
+    .fotoGalerie__header{
+        position: absolute;
+        top: 15vh;
+        left: 2.5vw;
+        width: 25%;
+        height: 40vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h1{
+            margin: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .span{
+                font-size: 5rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                font-family: Helvetica;
+                margin: 0;
+                background: linear-gradient(90deg, #0F4A57, #039ca4);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .cursor{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        z-index: 10;
+        background-color: #0F4A57;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+
+        p{
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #fff;
+            margin: 0;
+        }
+    }
+
+    .fotoGalerie__images{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0vh 0;
+
+        .fotoGalerie__images__container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            flex-wrap: wrap;
+
+            .fotoGalerie__images__container__item{
+                width: 37.5vw;
+                height: 100vh;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                cursor:crosshair;
+
+                &:hover{
+                    .fotoGalerie__images__container__item__image__container{
+                        .fotoGalerie__images__container__item__image{
+                            transform: scale(1.025);
+                        }
+                    }
+                }
+
+                .fotoGalerie__images__container__item__image__container{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                    overflow: hidden;
+
+                    .fotoGalerie__images__container__item__image{
+                        width: 100%;
+                        height: 100%;
+                        scale: 1.2;
+                        object-fit: cover;
+                        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    }
+
+                }
+
+
+                .fotoGalerie__images__container__item__text__container{
+                    width: 100%;
+                    height: 15vh;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    z-index: 1;
+                    padding: 2.5vh 2.5vw;
+                    h2{
+                        font-size: 2rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        color: #fff;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        overflow: hidden;
+                        span{
+                            display: inline-block;
+                            position: relative;
+                        }
+                    }
+    
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        font-family: Helvetica;
+                        margin: 0;
+                        color: #fff;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        overflow: hidden;
+                        span{
+                            display: inline-block;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

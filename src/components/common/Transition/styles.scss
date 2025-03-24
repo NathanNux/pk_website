@@ -1,0 +1,43 @@
+
+
+.transition {
+    position: relative;
+    width: 100vw;
+    border-radius: 50px;
+    
+}
+
+.slide{
+    position: fixed;
+    top: 50vh;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    z-index: 5;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 100px 100px 0 0;
+    z-index: 100;
+
+
+    p{
+        font-size: 10rem;
+        font-weight: 300;
+        color: #0F4A57;
+        margin: 2;
+        background: linear-gradient(90deg, #0F4A57, #039ca4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-family: Helvetica;
+        text-transform: uppercase;
+    }
+}
+
+
+

@@ -1,0 +1,29 @@
+@use '../components/PreLoader/styles.scss' as preLoader;
+
+@use '../components/common/Backgorund/styles.scss' as background;
+@use '../components/common/Buttons/CTA/styles.scss' as ctaButton;
+@use '../components/common/Buttons/hashButton/styles.scss' as hashButton;
+@use '../components/common/Backgroundwhite/styles.scss' as backgroundWhite;
+@use '../components/common/Footer/styles.scss' as footer;
+@use '../components/common/Navbar/head/style.scss' as headLogo;
+@use '../components/common/Navbar/nav/style.scss' as navbar;
+@use '../components/common/Transition/styles.scss' as transition;
+
+@use '../components/Main/Intro/styles.scss' as mainIntro;
+@use '../components/FotoGalerie/styles.scss' as fotogalerie;
+
+@use '../components/Main/WhatIDo/styles.scss' as whatIDo;
+@use '../components/Main/WhatIDo/intro/styles.scss' as whatIDoIntro;
+@use '../components/Main/WhatIDo/main/styles.scss' as whatIDoMain;
+@use '../components/Main/WhatIDo/partners/styles.scss' as whatIDoPartners;
+
+@use '../components/Main/Trafika/styles.scss' as trafikaMainPage;
+@use '../components/Main/Contact/styles.scss' as contactMain;
+
+@use '../components/Trafika/Intro/styles.scss' as trafikaIntro;
+@use '../components/Trafika/Main/styles.scss' as trafikaMain;
+
+@use '../components/Trafika/Main/intro/styles.scss' as trafikaMainIntro;
+@use '../components/Trafika/Main/news/styles.scss' as trafikaMainNews;
+@use '../components/Trafika/Main/products/styles.scss' as trafikaMainProducts;
+@use '../components/Trafika/Main/text/styles.scss' as trafikaMainText;

@@ -1,0 +1,65 @@
+.cta__button{
+    width: 250px;
+    height: 100px;
+    padding: 1rem 2rem;
+    border: 1px solid #ff1d28;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        border: 1px solid #fff;
+    }
+
+    .cta__button__container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        overflow: hidden;
+        z-index: 2;
+        label{ 
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Helvetica;
+            font-size: 1.8rem;
+            color: #ff1d28;
+            text-transform: uppercase;
+            font-weight: 400;
+            cursor: pointer;
+    
+            span{
+                position: relative;
+            }
+
+            &:nth-of-type(2){
+                color: #fff;
+            }
+        }
+    }
+
+    .cta__button__background{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        scale: 1;
+        background: linear-gradient(to right, #0F4A57, #039ca4);
+        z-index: 1;
+    }
+}

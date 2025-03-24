@@ -1,0 +1,192 @@
+.Trafika{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    padding: 5vh 5vw;
+    gap: 10vw;
+    z-index: 2;
+    overflow: hidden;
+
+    .Trafika__bgimage{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        overflow: hidden; // This is correctly set
+
+        .Trafika__bgimage__inner{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden; // This is correctly set
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            // Add these important properties:
+            transform: translateZ(0); // Force GPU acceleration
+            will-change: transform; // Optimize for animations
+
+            .Trafika__bgimage__container{
+                width: 120%; 
+                height: 120%; 
+                position: absolute; 
+                top: -10%; 
+                left: -10%; 
+                scale: 1.02; 
+                object-fit: cover;
+            }
+        }
+    }
+
+    .Trafika__text{
+        position: relative;
+        width: 30%;
+        height: 50%;
+        z-index: 1;
+        color: #fff;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 2.5vw;
+
+        h2{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            font-size: 7rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            margin: 0;
+            // Text gradient implementation
+            background: linear-gradient(90deg, #FFF, #039ca4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            font-size: 4rem;
+            font-weight: 300;
+            text-transform: capitalize;
+            margin: 0;
+            margin-bottom: 1vh;
+        }
+    }
+
+    .Trafika__list{
+        width: 60%;
+        height: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        z-index: 1;
+        margin-bottom: 2.5vh;
+
+        .Trafika__list__item{
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 0.5vw;
+
+            .Trafika__list__item__link{
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0.5rem;
+                padding: 3vh 0 0 0;
+
+                .Trafika__list__item__link__text{
+                    width: 90%;
+                    height: 100%;
+                    position: relative;
+                    h3{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-start;
+                        flex-direction: row;
+                        margin: 0;
+                        span{
+                            font-size: 3rem;
+                            font-weight: 300;
+                            color: #fff;
+                        }
+
+                        &:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            span{
+                                font-size: 3rem;
+                                font-weight: 300;
+                                color: #ff1d28
+                            }
+                        }
+                    }
+                }
+
+                .arrow__container{
+                    width: 100%;
+                    height: 100%;
+                    text-decoration: none;
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    .arrow__primary__arrow{
+                        position: relative;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        &:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            img {
+                                // Add red color to second arrow
+                                filter: brightness(0) saturate(100%) invert(22%) sepia(95%) saturate(5800%) hue-rotate(349deg) brightness(115%) contrast(110%);                            
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(1){
+                width: 57.5%;
+            }
+            &:nth-of-type(2){
+                width: 97.5%;
+            }
+            &:nth-of-type(3){
+                width: 42.5%;
+            }
+
+            .divider{
+                width: 100%;
+                height: 1px;
+                background-color: #fff;
+
+            }
+        }
+    }
+}

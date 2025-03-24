@@ -1,0 +1,123 @@
+.main__intro{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    position: relative;
+    padding: 5vh 5vw;
+    gap: 2.5vw;
+    color: #fff;
+    z-index: 5;
+    .main__intro__content{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        gap: 2.5vw;
+        .main__intro__header{
+            width: 15vw;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+            gap: 2.5vw;
+            overflow: visible;
+    
+            h1{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                text-transform: capitalize;
+                margin: 0;
+                font-family: Helvetica;
+
+                .span{
+                    font-size: 7rem;
+                    font-weight: 300;
+                    margin: 0;
+
+                    // Text gradient implementation
+                    background: linear-gradient(90deg, #FFF, #039ca4);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+    
+            h2{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                text-transform: capitalize;
+                font-family: 'Times New Roman', Times, serif;
+                margin: 0 0 0.5rem 0;
+                .span{
+                    font-size: 5rem;
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
+        }
+
+        .main__intro__description{
+            width: 25vw;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            position: relative;
+            gap: 2.5vw;
+            padding-bottom: 10vh;
+            overflow: visible; 
+    
+            p{
+                height: 15vh;
+                width: 100%;
+                text-transform: capitalize;
+                font-family: Helvetica;
+                display: block; 
+                text-align: left;
+                line-height: 1.6; 
+                
+    
+                span {
+                    display: inline; 
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    margin: 0;
+                    white-space: normal;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .main__intro__image{
+        width: 25vw;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+
+        .main__intro__image__container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            scale: 1.1;
+        }
+    }
+}
