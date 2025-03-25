@@ -29,7 +29,7 @@
             flex-direction: row;
             text-decoration: none;
 
-            h3{
+            h4{
                 margin: 0;
                 display: flex;
                 justify-content: flex-start;
@@ -70,7 +70,7 @@
 
 /* Add this class when on light backgrounds */
 .nav__item--on-light a {
-    h3{
+    h4{
         .span{
             color: var(--logo-color-on-light);
         }   
@@ -83,11 +83,11 @@
 }
 
 // Add these new rules
-.nav__item h3.active-route {
+.nav__item h4.active-route {
     color: #ff1d28 !important;
 }
 
-.nav__item h3 .span.active-route-span {
+.nav__item h4 .span.active-route-span {
     color: #ff1d28 !important;
 }
 
