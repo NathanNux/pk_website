@@ -155,11 +155,11 @@ export default function Contact() {
                         <div className="contact__form__header">
                             <div className="contact__form__header__intro">
                                 <h3>Kontaktní forma</h3>
-                                <h5>
+                                <h4>
                                     Pokud si nejste jisti nebo máte jakýkoliv dotaz, 
                                     kontaktujte nás přímo, abychom Vám 
                                     mohli co nejrychleji pomoci.
-                                </h5>
+                                </h4>
                                 <p>
                                     Nebo použijte e-mail
                                 </p>
@@ -244,7 +244,7 @@ export default function Contact() {
                     const { title, text, phone, email } = item;
                     return (
                         <div className="contact__info__item" key={index}>
-                            <h2>{title}</h2>
+                            <h3>{title}</h3>
                             {text && <p>{text}</p>}
                             {phone && <Link href={`tel:${phone.replace(/\s+/g, '')}`}>{phone}</Link>}
                             {email && <Link href={`mailto:${email}`}>{email}</Link>}

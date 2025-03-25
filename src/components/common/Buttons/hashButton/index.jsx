@@ -226,19 +226,21 @@ export default function HashtagButton({ text, onClick, isActive: externalIsActiv
 
   return (
     <div
-      className="hashtagButton" 
-      onClick={handleClick} 
+      className="hashtagButton"
       onMouseEnter={onHoverEnter} 
       onMouseLeave={onHoverLeave}
     >
-      <div className="hashtagButton__container">
-        <p>
+      <div 
+        className="hashtagButton__container"
+        onClick={handleClick} 
+      >
+        <label className="hashtagButton__label">
           <SplitText text={text} active={active} variants={charAnim1} />
-        </p>
+        </label>
         
-        <p>
+        <label className="hashtagButton__label">
           <SplitText text={text} active={active} variants={charAnim2} />
-        </p>
+        </label>
       </div>
       
       <motion.div

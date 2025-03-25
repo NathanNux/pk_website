@@ -10,7 +10,7 @@ const footerLinks = [
     },
     {
         text: 'Kontakt',
-        href: '#contact',
+        href: '/contact',
     },
     {
         text: 'FotoGalerie',
@@ -271,7 +271,7 @@ const Footer = forwardRef((props, ref ) => {
                 <div className="divider"/>
                 <Link 
                     className="footer__contact__link"
-                    href="#contact"
+                    href="/contact"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >

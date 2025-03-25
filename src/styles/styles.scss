@@ -27,3 +27,10 @@
 @use '../components/Trafika/Main/news/styles.scss' as trafikaMainNews;
 @use '../components/Trafika/Main/products/styles.scss' as trafikaMainProducts;
 @use '../components/Trafika/Main/text/styles.scss' as trafikaMainText;
+
+@use '../components/404/styles.scss' as error404;
+@use '../components/modems/Cookies/styles.scss' as cookies;
+@use '../components/modems/CookiesModem/styles.scss' as cookiesModem;
+@use '../components/CookiesPage/styles.scss' as cookiesPage;
+
+@use '../components/TermsPage/styles.scss' as termsConditions;

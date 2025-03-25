@@ -3,6 +3,8 @@ import Footer from "@/components/common/Footer";
 import Logo from "@/components/common/Navbar/head";
 import Nav from "@/components/common/Navbar/nav";
 import Transition from "@/components/common/Transition";
+import CookiesBar from "@/components/modems/Cookies";
+import { CookiesProvider } from "@/context/CookiesProvider";
 import { LoadProvider } from "@/context/globalContext";
 import "@/styles/globals.scss";
 import "@/styles/styles.scss"; 
@@ -48,21 +50,25 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <LoadProvider>
-        <Logo footerRef={footerRef} />
-        <Nav footerRef={footerRef} />
-        <BackgroundGradient />
-        <AnimatePresence mode="wait" onExitComplete={() => {
-          // Additional safety check - ensure scroll is at top after exit animation completes
-          window.scrollTo(0, 0);
-          if (window.lenis) window.lenis.scrollTo(0, { immediate: true });
-        }}>
-          <Transition key={router.pathname}>
-            <Component {...pageProps} />
-            <Footer ref={footerRef} />
-          </Transition>
-        </AnimatePresence>
-      </LoadProvider>
+      <CookiesProvider>
+        <LoadProvider>
+          <Logo footerRef={footerRef} />
+          <Nav footerRef={footerRef} />
+          <BackgroundGradient />
+          <CookiesBar />
+          <AnimatePresence mode="wait" onExitComplete={() => {
+            // Additional safety check - ensure scroll is at top after exit animation completes
+              window.scrollTo(0, 0);
+              if (window.lenis) window.lenis.scrollTo(0, { immediate: true });
+            }}
+          >
+              <Transition key={router.pathname}>
+                <Component {...pageProps} />
+                <Footer ref={footerRef} />
+              </Transition>
+            </AnimatePresence>
+          </LoadProvider>
+      </CookiesProvider>
     </>
   );
 }

@@ -251,7 +251,7 @@ export default function Nav({footerRef}) {
                                 }
                             }}
                         >
-                            <h3  
+                            <h4  
                                 style={{
                                     // Fix: Use proper ternary instead of logical AND
                                     color: router.pathname === href ? '#ff1d28 !important' : undefined,
@@ -265,9 +265,9 @@ export default function Nav({footerRef}) {
                                     router={router}
                                     isActiveRoute={isActiveRoute}
                                 />
-                            </h3>
+                            </h4>
                             
-                            <h3>
+                            <h4>
                                 <SplitText 
                                     text={title} 
                                     active={isCurrentItemHovered} 
@@ -276,7 +276,7 @@ export default function Nav({footerRef}) {
                                     router={router}
                                     isActiveRoute={isActiveRoute}
                                 />
-                            </h3>
+                            </h4>
                         </Link>
                     </motion.div>
                 );
