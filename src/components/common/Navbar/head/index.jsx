@@ -66,6 +66,10 @@ const SplitText = ({ text, active, variants }) => {
 };
 
 export default function Logo({footerRef}) {
+
+    // need to add the same mechanism as in nav component
+    const validPaths = ['/', '/trafika', '/fotogalerie', '/contact', '/cookies', '/terms'];
+
     const router = useRouter();
     const controls = useAnimationControls();
     const [active, setActive] = useState(false);
@@ -96,18 +100,24 @@ export default function Logo({footerRef}) {
             // Start with logo hidden
             controls.set("hidden");
             
-            // After 5.1 seconds delay, animate in the logo
+            // Check if current path is valid or a 404 page
+            const is404Page = !validPaths.includes(router.pathname);
+            
+            // Set delay - 0 for 404 pages, normal delay for valid pages
+            const animationDelay = is404Page ? 0 : 5100;
+            
+            // After delay (or immediately for 404), animate in the logo
             const timer = setTimeout(() => {
                 controls.start("visible").then(() => {
                     // Reapply color detection after animation completes
                     setTimeout(applyColorDetection, 350);
                 });
                 initialAnimPlayed.current = true;
-            }, 5100); // 5.1s delay as specified
+            }, animationDelay);
             
             return () => clearTimeout(timer);
         }
-    }, [slideLoad, controls]);
+    }, [slideLoad, controls, router.pathname]);
 
     // Initial color detection
     useEffect(() => {

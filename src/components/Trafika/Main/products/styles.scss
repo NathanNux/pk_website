@@ -1,161 +1,1681 @@
-.trafika__products{
-    position: relative;
-    width: 100vw;
-    height: 150vh;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    padding: 5vh 5vw;
-    gap: 5vh;
-    overflow: hidden;
-    z-index: 2;
-
-    .cursor{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 100px;
-        z-index: 10;
-        background-color: #0F4A57;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        pointer-events: none;
-        background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
-
-        p{
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #fff;
-            margin: 0;
-        }
-    }
-
-    .trafika__products__title{
-        width: 100%;
-        height: 40vh;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        flex-direction: column;
-        h3{
-            margin: 0;
+@media (min-aspect-ratio: 1/1) {
+    @media only screen and ( min-width: 1730px) {
+        .trafika__products{
+            position: relative;
+            width: 100vw;
+            height: 150vh;
             display: flex;
             justify-content: flex-start;
-            align-items: flex-start;
             flex-direction: column;
-
-            .word{
-                font-size: 7rem;
-                font-weight: 300;
-                text-transform: uppercase;
-                font-family: Helvetica;
-                margin: 0;
-                background: linear-gradient(90deg, #0F4A57, #039ca4);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                -webkit-text-fill-color: transparent;
-            }
-        }
-    }
-
-    .trafika__products__list{
-        width: 100%;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-
-        .trafika__products__list__items{
-            max-width: 100%;  
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            height: 100%;
-            gap: 1vw;
-            z-index: 1;
-            cursor:grab;
-            will-change: transform;
-
-            &:active{
-                cursor: grabbing;
-            }
-
-            .trafika__products__list__item{
-                flex:  0 0 auto;
-                width: 30vw;
-                height: 70vh;
-                position: relative;
+            align-items: center;
+            padding: 5vh 5vw;
+            gap: 5vh;
+            overflow: hidden;
+            z-index: 2;
+        
+            .cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                transform: translateZ(0); // Hardware acceleration
-
-                .trafika__products__list__item__container{
-                    width: 100%;
-                    height: 100%;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .trafika__products__title{
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
+                h3{
+                    margin: 0;
                     display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
-                    position: relative;
-                    overflow: hidden;
-
-                    .trafika__products__list__item__image{
-                        position: absolute;
-                        z-index: 0;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        pointer-events: none;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+        
+                    .word{
+                        font-size: 7rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
                     }
-
-                    .trafika__products__list__item__text{
-                        width: 100%;
-                        height: 30%;
+                }
+            }
+        
+            .trafika__products__list{
+                width: 100%;
+                height: 80vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+                .trafika__products__list__items{
+                    max-width: 100%;  
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    gap: 1vw;
+                    z-index: 1;
+                    cursor:grab;
+                    will-change: transform;
+        
+                    &:active{
+                        cursor: grabbing;
+                    }
+        
+                    .trafika__products__list__item{
+                        flex:  0 0 auto;
+                        width: 30vw;
+                        height: 70vh;
+                        position: relative;
                         display: flex;
-                        z-index: 1;
-                        justify-content: flex-end;
-                        align-items: flex-end;
-                        flex-direction: column;
-                        padding: 5vh 2.5vw;
-                        gap: 1vh;
-                        color: #fff;
-
-                        h5{
-                            font-size: 3rem;
-                            font-weight: 300;
-                            text-transform: capitalize;
-                            font-family: 'Times New Roman', Times, serif;
-                            color: #ff1d28;
-                            margin: 0;
-                            overflow: hidden;
-                            position: relative;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateZ(0); // Hardware acceleration
+        
+                        .trafika__products__list__item__container{
+                            width: 100%;
+                            height: 100%;
                             display: flex;
-                            justify-content: flex-end;
-                            align-items: center;
-                            
-                        }
-
-                        p{ 
-                            font-size: 2rem;
-                            font-weight: 300;
-                            font-family: Helvetica;
-                            margin: 0;
-                            overflow: hidden;
+                            justify-content: center;
+                            align-items: flex-end;
                             position: relative;
-                            display: flex;
-                            justify-content: flex-end;
-                            align-items: center;
-                            
+                            overflow: hidden;
+        
+                            .trafika__products__list__item__image{
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+        
+                            .trafika__products__list__item__text{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                z-index: 1;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                padding: 5vh 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h5{
+                                    font-size: 3rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: #ff1d28;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+        
+                                p{ 
+                                    font-size: 2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+                            }
                         }
                     }
                 }
+            }
+        }
+    }
+    @media only screen and (min-width: 1598px) and (max-width: 1729px) {
+        .trafika__products{
+            position: relative;
+            width: 100vw;
+            height: 150vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            padding: 5vh 5vw;
+            gap: 5vh;
+            overflow: hidden;
+            z-index: 2;
+        
+            .cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .trafika__products__title{
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
+                h3{
+                    margin: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+        
+                    .word{
+                        font-size: 7rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .trafika__products__list{
+                width: 100%;
+                height: 80vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+                .trafika__products__list__items{
+                    max-width: 100%;  
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    gap: 1vw;
+                    z-index: 1;
+                    cursor:grab;
+                    will-change: transform;
+        
+                    &:active{
+                        cursor: grabbing;
+                    }
+        
+                    .trafika__products__list__item{
+                        flex:  0 0 auto;
+                        width: 30vw;
+                        height: 70vh;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateZ(0); // Hardware acceleration
+        
+                        .trafika__products__list__item__container{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            position: relative;
+                            overflow: hidden;
+        
+                            .trafika__products__list__item__image{
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+        
+                            .trafika__products__list__item__text{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                z-index: 1;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                padding: 5vh 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h5{
+                                    font-size: 3rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: #ff1d28;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+        
+                                p{ 
+                                    font-size: 2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) and (min-height: 820px) {
+        .trafika__products{
+            position: relative;
+            width: 100vw;
+            height: 170vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            padding: 5vh 5vw;
+            gap: 5vh;
+            overflow: hidden;
+            z-index: 2;
+        
+            .cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .trafika__products__title{
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
+                h3{
+                    margin: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+        
+                    .word{
+                        font-size: 6rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .trafika__products__list{
+                width: 100%;
+                height: 80vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+                .trafika__products__list__items{
+                    max-width: 100%;  
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    gap: 1vw;
+                    z-index: 1;
+                    cursor:grab;
+                    will-change: transform;
+        
+                    &:active{
+                        cursor: grabbing;
+                    }
+        
+                    .trafika__products__list__item{
+                        flex:  0 0 auto;
+                        width: 30vw;
+                        height: 80vh;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateZ(0); // Hardware acceleration
+        
+                        .trafika__products__list__item__container{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            position: relative;
+                            overflow: hidden;
+        
+                            .trafika__products__list__item__image{
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+        
+                            .trafika__products__list__item__text{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                z-index: 1;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                padding: 5vh 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h5{
+                                    font-size: 2.5rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: #ff1d28;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+        
+                                p{ 
+                                    font-size: 1.8rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1420px) and (max-width: 1596px) and (min-height: 750px) {
+        .trafika__products{
+            position: relative;
+            width: 100vw;
+            height: 170vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            padding: 5vh 5vw;
+            gap: 5vh;
+            overflow: hidden;
+            z-index: 2;
+        
+            .cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .trafika__products__title{
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
+                h3{
+                    margin: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+        
+                    .word{
+                        font-size: 6rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .trafika__products__list{
+                width: 100%;
+                height: 80vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+                .trafika__products__list__items{
+                    max-width: 100%;  
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    gap: 1vw;
+                    z-index: 1;
+                    cursor:grab;
+                    will-change: transform;
+        
+                    &:active{
+                        cursor: grabbing;
+                    }
+        
+                    .trafika__products__list__item{
+                        flex:  0 0 auto;
+                        width: 30vw;
+                        height: 80vh;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateZ(0); // Hardware acceleration
+        
+                        .trafika__products__list__item__container{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            position: relative;
+                            overflow: hidden;
+        
+                            .trafika__products__list__item__image{
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+        
+                            .trafika__products__list__item__text{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                z-index: 1;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                padding: 5vh 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h5{
+                                    font-size: 2.5rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: #ff1d28;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+        
+                                p{ 
+                                    font-size: 1.8rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .trafika__products{
+            position: relative;
+            width: 100vw;
+            height: 180vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            padding: 5vh 5vw;
+            gap: 5vh;
+            overflow: hidden;
+            z-index: 2;
+        
+            .cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .trafika__products__title{
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
+                h3{
+                    margin: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+        
+                    .word{
+                        font-size: 5rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .trafika__products__list{
+                width: 100%;
+                height: 80vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+                .trafika__products__list__items{
+                    max-width: 100%;  
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    gap: 1vw;
+                    z-index: 1;
+                    cursor:grab;
+                    will-change: transform;
+        
+                    &:active{
+                        cursor: grabbing;
+                    }
+        
+                    .trafika__products__list__item{
+                        flex:  0 0 auto;
+                        width: 30vw;
+                        height: 80vh;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateZ(0); // Hardware acceleration
+        
+                        .trafika__products__list__item__container{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            position: relative;
+                            overflow: hidden;
+        
+                            .trafika__products__list__item__image{
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+        
+                            .trafika__products__list__item__text{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                z-index: 1;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                padding: 5vh 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h5{
+                                    font-size: 2rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: #ff1d28;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+        
+                                p{ 
+                                    font-size: 1.6rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {
+        .trafika__products{
+            position: relative;
+            width: 100vw;
+            height: 140vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            padding: 5vh 5vw;
+            gap: 5vh;
+            overflow: hidden;
+            z-index: 2;
+        
+            .cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 75px;
+                height: 75px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .trafika__products__title{
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
+                h3{
+                    margin: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+        
+                    .word{
+                        font-size: 4rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .trafika__products__list{
+                width: 100%;
+                height: 60vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+                .trafika__products__list__items{
+                    max-width: 100%;  
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    gap: 1vw;
+                    z-index: 1;
+                    cursor:grab;
+                    will-change: transform;
+        
+                    &:active{
+                        cursor: grabbing;
+                    }
+        
+                    .trafika__products__list__item{
+                        flex:  0 0 auto;
+                        width: 30vw;
+                        height: 60vh;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateZ(0); // Hardware acceleration
+        
+                        .trafika__products__list__item__container{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            position: relative;
+                            overflow: hidden;
+        
+                            .trafika__products__list__item__image{
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+        
+                            .trafika__products__list__item__text{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                z-index: 1;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                padding: 5vh 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h5{
+                                    font-size: 1.8rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: #ff1d28;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+        
+                                p{ 
+                                    font-size: 1.4rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 701px ) and (max-width: 950px) and (min-height: 280px) and (max-height: 600px) {
+        .trafika__products{
+            position: relative;
+            width: 100vw;
+            height: 200vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            padding: 5vh 5vw;
+            gap: 5vh;
+            overflow: hidden;
+            z-index: 2;
+        
+            .cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 75px;
+                height: 75px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .trafika__products__title{
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
+                h3{
+                    margin: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+        
+                    .word{
+                        font-size: 2.5rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .trafika__products__list{
+                width: 100%;
+                height: 60vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+                .trafika__products__list__items{
+                    max-width: 100%;  
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    gap: 1vw;
+                    z-index: 1;
+                    cursor:grab;
+                    will-change: transform;
+        
+                    &:active{
+                        cursor: grabbing;
+                    }
+        
+                    .trafika__products__list__item{
+                        flex:  0 0 auto;
+                        width: 30vw;
+                        height: 90vh;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateZ(0); // Hardware acceleration
+        
+                        .trafika__products__list__item__container{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            position: relative;
+                            overflow: hidden;
+        
+                            .trafika__products__list__item__image{
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+        
+                            .trafika__products__list__item__text{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                z-index: 1;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                padding: 5vh 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h5{
+                                    font-size: 1.4rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: #ff1d28;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+        
+                                p{ 
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 500px ) and (max-width: 700px) and (min-height: 200px) and (max-height: 380px) {
+        .trafika__products{
+            position: relative;
+            width: 100vw;
+            height: 180vh;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            padding: 5vh 5vw;
+            gap: 5vh;
+            overflow: hidden;
+            z-index: 2;
+        
+            .cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 75px;
+                height: 75px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .trafika__products__title{
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
+                h3{
+                    margin: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+        
+                    .word{
+                        font-size: 2.5rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .trafika__products__list{
+                width: 100%;
+                height: 60vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+                .trafika__products__list__items{
+                    max-width: 100%;  
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    gap: 1vw;
+                    z-index: 1;
+                    cursor:grab;
+                    will-change: transform;
+        
+                    &:active{
+                        cursor: grabbing;
+                    }
+        
+                    .trafika__products__list__item{
+                        flex:  0 0 auto;
+                        width: 30vw;
+                        height: 80vh;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateZ(0); // Hardware acceleration
+        
+                        .trafika__products__list__item__container{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            position: relative;
+                            overflow: hidden;
+        
+                            .trafika__products__list__item__image{
+                                position: absolute;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                pointer-events: none;
+                            }
+        
+                            .trafika__products__list__item__text{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                z-index: 1;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                padding: 5vh 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h5{
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    color: #ff1d28;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+        
+                                p{ 
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
+    @media only screen and (min-width: 1000px) {
+        .preloader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            gap: 1vh;
+        
+            .preloader__divider{
+                width: 70%;
+                height: 2px;
+                background-color: #fff;
+        
+                &:nth-of-type(3){
+                    width: 40%;
+                }
+            }
+            .preloader__container{
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+                .perloader__text1{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{  
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }
+        
+                .preloader__loader{
+                    width: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h1{
+                        font-size: 7rem;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-weight: 300;
+                        color: #fff;
+                    }
+                }
+        
+                .perloader__text2{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }   
+            }
+        }
+    }
+    @media only screen and (min-width: 600px) and (max-width: 990px) and (min-height: 800px) {
+        .preloader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            gap: 1vh;
+        
+            .preloader__divider{
+                width: 70%;
+                height: 2px;
+                background-color: #fff;
+        
+                &:nth-of-type(3){
+                    width: 40%;
+                }
+            }
+            .preloader__container{
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+                .perloader__text1{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{  
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }
+        
+                .preloader__loader{
+                    width: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h1{
+                        font-size: 7rem;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-weight: 300;
+                        color: #fff;
+                    }
+                }
+        
+                .perloader__text2{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }   
+            }
+        }
+    }
+    @media only screen and (min-width: 400px) and (max-width: 600px) and (min-height: 700px) {
+        .preloader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            gap: 1vh;
+        
+            .preloader__divider{
+                width: 70%;
+                height: 2px;
+                background-color: #fff;
+        
+                &:nth-of-type(3){
+                    width: 40%;
+                }
+            }
+            .preloader__container{
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+                .perloader__text1{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{  
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }
+        
+                .preloader__loader{
+                    width: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h1{
+                        font-size: 6rem;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-weight: 300;
+                        color: #fff;
+                    }
+                }
+        
+                .perloader__text2{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }   
+            }
+        }
+    }
+    @media only screen and (min-width: 380px) and (max-width: 399px) and (min-height: 600px) {
+        .preloader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            gap: 1vh;
+        
+            .preloader__divider{
+                width: 70%;
+                height: 2px;
+                background-color: #fff;
+        
+                &:nth-of-type(3){
+                    width: 40%;
+                }
+            }
+            .preloader__container{
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+                .perloader__text1{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{  
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }
+        
+                .preloader__loader{
+                    width: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h1{
+                        font-size: 5rem;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-weight: 300;
+                        color: #fff;
+                    }
+                }
+        
+                .perloader__text2{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }   
+            }
+        }
+    }
+    @media only screen and (min-width: 320px) and (max-width: 379px) and (min-height: 450px) {
+        .preloader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            gap: 1vh;
+        
+            .preloader__divider{
+                width: 70%;
+                height: 2px;
+                background-color: #fff;
+        
+                &:nth-of-type(3){
+                    width: 40%;
+                }
+            }
+            .preloader__container{
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+                .perloader__text1{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{  
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }
+        
+                .preloader__loader{
+                    width: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h1{
+                        font-size: 4rem;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-weight: 300;
+                        color: #fff;
+                    }
+                }
+        
+                .perloader__text2{
+                    width: 35%;
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: Helvetica;
+                    overflow: hidden;
+                    p{
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+                }   
             }
         }
     }

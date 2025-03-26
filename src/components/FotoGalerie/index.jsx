@@ -231,7 +231,6 @@ const titleAnim = {
 
 
 export default function FotoGalerie() {
-    //WIP: Consider other motion desing for this section - there will be parallax anim, and entry same as preloader image main page intro 
     const [isTextHovered, setIsTextHovered] = useState({ active: false, index: 0 });
     const [ isHovered, setIsHovered ] = useState({ active: false, index: 0 });
     const itemRefs = useRef([]);

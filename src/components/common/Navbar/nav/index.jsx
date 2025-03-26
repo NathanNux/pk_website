@@ -87,6 +87,8 @@ const SplitText = ({ text, active, variants, isActiveRoute }) => {
 };
  
 export default function Nav({footerRef}) {
+    // need here valid paths to disable preloader anim for 404 page
+    const validPaths = ['/', '/trafika', '/fotogalerie', '/contact', '/cookies', '/terms'];
     const router = useRouter();
     const navItemRefs = useRef([]);
     const [isHovered, setIsHovered] = useState({active: false, index: null});
@@ -125,18 +127,24 @@ export default function Nav({footerRef}) {
             // Start with navbar hidden
             controls.set("hidden");
             
-            // After 4.9 seconds delay, animate in the navbar
+            // Check if current path is valid or a 404 page
+            const is404Page = !validPaths.includes(router.pathname);
+            
+            // Set delay - 0 for 404 pages, normal delay for valid pages
+            const animationDelay = is404Page ? 0 : 5100;
+            
+            // Apply appropriate delay based on page type
             const timer = setTimeout(() => {
                 controls.start("visible").then(() => {
                     // Reapply color detection after animation completes
                     setTimeout(applyColorDetection, 350);
                 });
                 initialAnimPlayed.current = true;
-            }, 5100); // 4.9s delay to match other animations
+            }, animationDelay);
             
             return () => clearTimeout(timer);
         }
-    }, [slideLoad, controls]);
+    }, [slideLoad, controls, router.pathname]);
     
     // SECOND EFFECT: Footer Visibility Control
     useEffect(() => {
