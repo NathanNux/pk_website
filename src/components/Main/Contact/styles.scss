@@ -5323,367 +5323,3345 @@
 
 @media (max-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1000px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .contact{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            position: relative;
+            padding: 10vh 5vw;
+            z-index: 2;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            .contact__form__container{
+                position: relative;
+                width: 95%;
+                height: 100%;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                align-items: flex-end;
         
-                .preloader__loader{
-                    width: 15%;
+                .contact__form{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 7rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-end; 
+        
+                    form{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-start; 
+                        flex-direction: column;
+        
+                        .contact__form__header{
+                            width: 100%;
+                            height: 30%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            .contact__form__header__intro{
+                                width: 70%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h3{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 3rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                            .contact__form__header__contact{
+                                width: 30%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1.5vh;
+                                color: #fff; 
+                                
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.5rem;
+                                    text-transform: uppercase;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                a{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.5rem;
+                                    text-decoration: none;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__fullname{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+        
+                            .contact__form__input__fullname__name{
+                                width: 40%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__fullname__surname{
+                                width: 60%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__inputs{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+        
+                            .contact__form__input__inputs__email{
+                                width: 60%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__inputs__phone{
+                                width: 50%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__message{
+                            width: 100%;
+                            position: relative;
+                            height: 25%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            border: #fff 1px solid;
+                            padding: 1vw 1vw 0 1vw;
+                            gap: 1vh;
+        
+                            .contact__form__input__message__hashtag{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                padding: 0.5rem 2rem;
+                                width: 45%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                flex-direction: row;
+                                gap: 0.5rem;
+        
+                                
+                            }
+        
+                            label{ 
+                                font-size: 1.5rem;
+                                font-weight: 300;
+                                text-transform: uppercase;
+                                font-family: 'Times New Roman', Times, serif;
+                                margin: 0;
+                                color: #ff1d28;
+                            }
+        
+                            textarea {
+                                width: 100%;
+                                height: 100%;
+                                background: transparent;
+                                border: none;
+                                outline: none;
+                                box-shadow: none;
+                                padding: 0;
+                                margin: 0;
+                                color: #fff;
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                font-family: Helvetica;
+                                margin-left: 1rem;
+                                resize: none; 
+                                
+                                /* Remove browser default styles */
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                
+                                /* Remove auto-fill background in Chrome */
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    -webkit-text-fill-color: #fff;
+                                    transition: background-color 5000s ease-in-out 0s;
+                                    box-shadow: 0 0 0px 1000px transparent inset;
+                                }
+                                
+                                /* Placeholder styling */
+                                &::placeholder {
+                                    color: #fff; 
+                                    
+                                }
+                                
+                                /* Remove focus ring */
+                                &:focus {
+                                    outline: none;
+                                    border: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__send{
+                            width: 100%;
+                            height: fit-content;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            z-index: 2;
+        
+                            .contact__form__input__send__gdpr{
+                                width: 90%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vh 1vw;
+                                gap: 1vh;
+                                color: #fff;
+                                z-index: 1;
+                                .contact__form__input__send__gdpr__link{
+                                    width: 7.5vw;
+                                    height: 100%;
+                                    text-decoration: none;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    
+                                    .contact__form__input__send__gdpr__link__container {
+                                        position: relative;
+                                        overflow: hidden; 
+                                        width: 100%;
+                                        height: 1.5rem; 
+                                        
+                                        p {
+                                            margin: 0;
+                                            padding: 0;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            align-items: flex-end;
+                                            
+                                            &.primary-text {
+                                                position: relative; 
+                                                z-index: 2;
+                                                width: 100%;
+                                                color: #fff;
+                                                span {
+                                                    font-size: 1rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block; 
+                                                }
+                                            }
+                                            
+                                            &.secondary-text {
+                                                position: absolute; 
+                                                top: 0;
+                                                right: 0;
+                                                width: 100%;
+                                                z-index: 1;
+                                                color: #ff1d28;
+                                                span {
+                                                    font-size: 1rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block;  
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .divider{
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #ff1d28;
+                                    }
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+        
+                            .contact__form__send__button{
+                                width: 20%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 2;
+        
+                                .cta__button{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
                     }
                 }
+            }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
+            .contact__info{
+                width: 95%;
+                height: 80%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+        
+                .divider{
+                    width: 50%;
+                    height: 1px;
+                    background-color: #fff;
+                }
+        
+                .contact__info__item{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    color: #fff;
+                    gap: 1vh;
+                    border-bottom: #fff 1px solid;
+        
+                    h3{
+                        font-size: 2rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        margin: 0;
                     }
-                }   
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                        text-decoration: none; 
+                        color: #fff;
+                        margin: 0;
+                    }
+        
+                    &:nth-of-type(2){
+                        width: 50%;
+                    }
+                    &:nth-of-type(3){
+                        width: 45%;
+                    }
+                    &:nth-of-type(4){
+                        width: 40%;
+                    }
+                    &:nth-of-type(5){
+                        width: 35%;
+                    }
+                }
             }
         }
     }
     @media only screen and (min-width: 600px) and (max-width: 990px) and (min-height: 800px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .contact{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 140vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            position: relative;
+            padding: 10vh 5vw;
+            z-index: 2;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            .contact__form__container{
+                position: relative;
+                width: 95%;
+                height: 100%;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                align-items: flex-end;
         
-                .preloader__loader{
-                    width: 15%;
+                .contact__form{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 7rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-end; 
+        
+                    form{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-start; 
+                        flex-direction: column;
+        
+                        .contact__form__header{
+                            width: 100%;
+                            height: 25%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            .contact__form__header__intro{
+                                width: 70%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h3{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 2.5rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                            .contact__form__header__contact{
+                                width: 35%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1.5vh;
+                                color: #fff; 
+                                
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.3rem;
+                                    text-transform: uppercase;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                a{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.3rem;
+                                    text-decoration: none;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__fullname{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+        
+                            .contact__form__input__fullname__name{
+                                width: 40%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__fullname__surname{
+                                width: 60%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__inputs{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+        
+                            .contact__form__input__inputs__email{
+                                width: 60%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__inputs__phone{
+                                width: 50%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__message{
+                            width: 100%;
+                            position: relative;
+                            height: 25%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            border: #fff 1px solid;
+                            padding: 1vw 1vw 0 1vw;
+                            gap: 1vh;
+        
+                            .contact__form__input__message__hashtag{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                padding: 0.5rem 2rem;
+                                width: 55%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                flex-direction: row;
+                                gap: 0.5rem;
+        
+                                
+                            }
+        
+                            label{ 
+                                font-size: 1.5rem;
+                                font-weight: 300;
+                                text-transform: uppercase;
+                                font-family: 'Times New Roman', Times, serif;
+                                margin: 0;
+                                color: #ff1d28;
+                            }
+        
+                            textarea {
+                                width: 100%;
+                                height: 100%;
+                                background: transparent;
+                                border: none;
+                                outline: none;
+                                box-shadow: none;
+                                padding: 0;
+                                margin: 0;
+                                color: #fff;
+                                font-size: 1.2rem;
+                                font-weight: 300;
+                                font-family: Helvetica;
+                                margin-left: 1rem;
+                                resize: none; 
+                                
+                                /* Remove browser default styles */
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                
+                                /* Remove auto-fill background in Chrome */
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    -webkit-text-fill-color: #fff;
+                                    transition: background-color 5000s ease-in-out 0s;
+                                    box-shadow: 0 0 0px 1000px transparent inset;
+                                }
+                                
+                                /* Placeholder styling */
+                                &::placeholder {
+                                    color: #fff; 
+                                    
+                                }
+                                
+                                /* Remove focus ring */
+                                &:focus {
+                                    outline: none;
+                                    border: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__send{
+                            width: 100%;
+                            height: fit-content;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            z-index: 2;
+        
+                            .contact__form__input__send__gdpr{
+                                width: 90%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vh 1vw;
+                                gap: 1vh;
+                                color: #fff;
+                                z-index: 1;
+                                .contact__form__input__send__gdpr__link{
+                                    width: 7.5vw;
+                                    height: 100%;
+                                    text-decoration: none;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    
+                                    .contact__form__input__send__gdpr__link__container {
+                                        position: relative;
+                                        overflow: hidden; 
+                                        width: 100%;
+                                        height: 1.5rem; 
+                                        
+                                        p {
+                                            margin: 0;
+                                            padding: 0;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            align-items: flex-end;
+                                            
+                                            &.primary-text {
+                                                position: relative; 
+                                                z-index: 2;
+                                                width: 100%;
+                                                color: #fff;
+                                                span {
+                                                    font-size: 1rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block; 
+                                                }
+                                            }
+                                            
+                                            &.secondary-text {
+                                                position: absolute; 
+                                                top: 0;
+                                                right: 0;
+                                                width: 100%;
+                                                z-index: 1;
+                                                color: #ff1d28;
+                                                span {
+                                                    font-size: 1rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block;  
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .divider{
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #ff1d28;
+                                    }
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+        
+                            .contact__form__send__button{
+                                width: 20%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 2;
+        
+                                .cta__button{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
                     }
                 }
+            }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
+            .contact__info{
+                width: 95%;
+                height: 80%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+        
+                .divider{
+                    width: 50%;
+                    height: 1px;
+                    background-color: #fff;
+                }
+        
+                .contact__info__item{
+                    width: 100%;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    color: #fff;
+                    gap: 1vh;
+                    border-bottom: #fff 1px solid;
+        
+                    h3{
+                        font-size: 1.8rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        margin: 0;
                     }
-                }   
+                    p{
+                        font-size: 1.3rem;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+                    a{
+                        font-size: 1.3rem;
+                        font-weight: 300;
+                        text-decoration: none; 
+                        color: #fff;
+                        margin: 0;
+                    }
+        
+                    &:nth-of-type(2){
+                        width: 60%;
+                    }
+                    &:nth-of-type(3){
+                        width: 55%;
+                    }
+                    &:nth-of-type(4){
+                        width: 50%;
+                    }
+                    &:nth-of-type(5){
+                        width: 45%;
+                    }
+                }
             }
         }
     }
     @media only screen and (min-width: 400px) and (max-width: 600px) and (min-height: 700px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .contact{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 200vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            position: relative;
+            padding: 10vh 5vw;
+            z-index: 2;
+            gap: 10vh;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            .contact__form__container{
+                position: relative;
+                width: 90%;
+                height: 100%;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                align-items: flex-end;
         
-                .preloader__loader{
-                    width: 15%;
+                .contact__form{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 6rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-end; 
+        
+                    form{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-start; 
+                        flex-direction: column;
+        
+                        .contact__form__header{
+                            width: 100%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            .contact__form__header__intro{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h3{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 0.8rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                            .contact__form__header__contact{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1.5vh;
+                                color: #fff; 
+                                
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.1rem;
+                                    text-transform: uppercase;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                a{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.3rem;
+                                    text-decoration: none;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__fullname{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            flex-direction: column;
+        
+                            .contact__form__input__fullname__name{
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__fullname__surname{
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__inputs{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            flex-direction: column;
+        
+                            .contact__form__input__inputs__email{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__inputs__phone{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__message{
+                            width: 100%;
+                            position: relative;
+                            height: 20%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            border: #fff 1px solid;
+                            padding: 2.5vh 2.5vw 0 3.5vw;
+                            gap: 1vh;
+        
+                            .contact__form__input__message__hashtag{
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                padding: 0.5rem 2rem;
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                flex-direction: row;
+                                gap: 0.5rem;
+        
+                                
+                            }
+        
+                            label{ 
+                                font-size: 1.3rem;
+                                font-weight: 300;
+                                text-transform: uppercase;
+                                font-family: 'Times New Roman', Times, serif;
+                                margin: 0;
+                                color: #ff1d28;
+                            }
+        
+                            textarea {
+                                width: 100%;
+                                height: 100%;
+                                background: transparent;
+                                border: none;
+                                outline: none;
+                                box-shadow: none;
+                                padding: 0;
+                                margin: 0;
+                                color: #fff;
+                                font-size: 1.1rem;
+                                font-weight: 300;
+                                font-family: Helvetica;
+                                margin-left: 1rem;
+                                resize: none; 
+                                
+                                /* Remove browser default styles */
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                
+                                /* Remove auto-fill background in Chrome */
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    -webkit-text-fill-color: #fff;
+                                    transition: background-color 5000s ease-in-out 0s;
+                                    box-shadow: 0 0 0px 1000px transparent inset;
+                                }
+                                
+                                /* Placeholder styling */
+                                &::placeholder {
+                                    color: #fff; 
+                                    
+                                }
+                                
+                                /* Remove focus ring */
+                                &:focus {
+                                    outline: none;
+                                    border: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__send{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            z-index: 2;
+        
+                            .contact__form__input__send__gdpr{
+                                width: 100%;
+                                height: 70%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vh 1vw;
+                                gap: 1vh;
+                                color: #fff;
+                                z-index: 1;
+                                .contact__form__input__send__gdpr__link{
+                                    width: 25vw;
+                                    height: 100%;
+                                    text-decoration: none;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    
+                                    .contact__form__input__send__gdpr__link__container {
+                                        position: relative;
+                                        overflow: hidden; 
+                                        width: 100%;
+                                        height: 1.5rem; 
+                                        
+                                        p {
+                                            width: 100%;
+                                            margin: 0;
+                                            padding: 0;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            align-items: flex-end;
+                                            
+                                            &.primary-text {
+                                                position: relative; 
+                                                z-index: 2;
+                                                width: 100%;
+                                                color: #fff;
+                                                span {
+                                                    font-size: 0.9rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block; 
+                                                }
+                                            }
+                                            
+                                            &.secondary-text {
+                                                position: absolute; 
+                                                top: 0;
+                                                right: 0;
+                                                width: 100%;
+                                                z-index: 1;
+                                                color: #ff1d28;
+                                                span {
+                                                    font-size: 1rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block;  
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .divider{
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #ff1d28;
+                                    }
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+        
+                            .contact__form__send__button{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 2;
+        
+                                .cta__button{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
                     }
                 }
+            }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
+            .contact__info{
+                width: 90%;
+                height: 30%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+        
+                .divider{
+                    width: 85%;
+                    height: 1px;
+                    background-color: #fff;
+                }
+        
+                .contact__info__item{
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    color: #fff;
+                    gap: 1vh;
+                    border-bottom: #fff 1px solid;
+        
+                    h3{
                         font-size: 1.6rem;
-                        color: #fff;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        margin: 0;
                     }
-                }   
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+                    a{
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        text-decoration: none; 
+                        color: #fff;
+                        margin: 0;
+                    }
+        
+                    &:nth-of-type(2){
+                        width: 90%;
+                    }
+                    &:nth-of-type(3){
+                        width: 85%;
+                    }
+                    &:nth-of-type(4){
+                        width: 80%;
+                    }
+                    &:nth-of-type(5){
+                        width: 75%;
+                    }
+                }
             }
         }
     }
     @media only screen and (min-width: 380px) and (max-width: 399px) and (min-height: 600px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .contact{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 200vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            position: relative;
+            padding: 10vh 5vw;
+            z-index: 2;
+            gap: 10vh;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            .contact__form__container{
+                position: relative;
+                width: 90%;
+                height: 100%;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                align-items: flex-end;
         
-                .preloader__loader{
-                    width: 15%;
+                .contact__form{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 5rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-end; 
+        
+                    form{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-start; 
+                        flex-direction: column;
+        
+                        .contact__form__header{
+                            width: 100%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            .contact__form__header__intro{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h3{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 0.8rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                            .contact__form__header__contact{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1.5vh;
+                                color: #fff; 
+                                
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.1rem;
+                                    text-transform: uppercase;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                a{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.3rem;
+                                    text-decoration: none;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__fullname{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            flex-direction: column;
+        
+                            .contact__form__input__fullname__name{
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__fullname__surname{
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__inputs{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            flex-direction: column;
+        
+                            .contact__form__input__inputs__email{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__inputs__phone{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__message{
+                            width: 100%;
+                            position: relative;
+                            height: 20%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            border: #fff 1px solid;
+                            padding: 2.5vh 2.5vw 0 3.5vw;
+                            gap: 1vh;
+        
+                            .contact__form__input__message__hashtag{
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                padding: 0.5rem 1rem;
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                flex-direction: row;
+                                gap: 0.5rem;
+        
+                                
+                            }
+        
+                            label{ 
+                                font-size: 1.3rem;
+                                font-weight: 300;
+                                text-transform: uppercase;
+                                font-family: 'Times New Roman', Times, serif;
+                                margin: 0;
+                                color: #ff1d28;
+                            }
+        
+                            textarea {
+                                width: 100%;
+                                height: 100%;
+                                background: transparent;
+                                border: none;
+                                outline: none;
+                                box-shadow: none;
+                                padding: 0;
+                                margin: 0;
+                                color: #fff;
+                                font-size: 1.1rem;
+                                font-weight: 300;
+                                font-family: Helvetica;
+                                margin-left: 1rem;
+                                resize: none; 
+                                
+                                /* Remove browser default styles */
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                
+                                /* Remove auto-fill background in Chrome */
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    -webkit-text-fill-color: #fff;
+                                    transition: background-color 5000s ease-in-out 0s;
+                                    box-shadow: 0 0 0px 1000px transparent inset;
+                                }
+                                
+                                /* Placeholder styling */
+                                &::placeholder {
+                                    color: #fff; 
+                                    
+                                }
+                                
+                                /* Remove focus ring */
+                                &:focus {
+                                    outline: none;
+                                    border: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__send{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            z-index: 2;
+        
+                            .contact__form__input__send__gdpr{
+                                width: 100%;
+                                height: 70%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vh 1vw;
+                                gap: 1vh;
+                                color: #fff;
+                                z-index: 1;
+                                .contact__form__input__send__gdpr__link{
+                                    width: 25vw;
+                                    height: 100%;
+                                    text-decoration: none;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    
+                                    .contact__form__input__send__gdpr__link__container {
+                                        position: relative;
+                                        overflow: hidden; 
+                                        width: 100%;
+                                        height: 1.5rem; 
+                                        
+                                        p {
+                                            width: 100%;
+                                            margin: 0;
+                                            padding: 0;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            align-items: flex-end;
+                                            
+                                            &.primary-text {
+                                                position: relative; 
+                                                z-index: 2;
+                                                width: 100%;
+                                                color: #fff;
+                                                span {
+                                                    font-size: 0.9rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block; 
+                                                }
+                                            }
+                                            
+                                            &.secondary-text {
+                                                position: absolute; 
+                                                top: 0;
+                                                right: 0;
+                                                width: 100%;
+                                                z-index: 1;
+                                                color: #ff1d28;
+                                                span {
+                                                    font-size: 1rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block;  
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .divider{
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #ff1d28;
+                                    }
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+        
+                            .contact__form__send__button{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 2;
+        
+                                .cta__button{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
                     }
                 }
+            }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
+            .contact__info{
+                width: 90%;
+                height: 30%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+        
+                .divider{
+                    width: 95%;
+                    height: 1px;
+                    background-color: #fff;
+                }
+        
+                .contact__info__item{
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    color: #fff;
+                    gap: 1vh;
+                    border-bottom: #fff 1px solid;
+        
+                    h3{
                         font-size: 1.6rem;
-                        color: #fff;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        margin: 0;
                     }
-                }   
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+                    a{
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        text-decoration: none; 
+                        color: #fff;
+                        margin: 0;
+                    }
+        
+                    &:nth-of-type(2){
+                        width: 100%;
+                    }
+                    &:nth-of-type(3){
+                        width: 95%;
+                    }
+                    &:nth-of-type(4){
+                        width: 90%;
+                    }
+                    &:nth-of-type(5){
+                        width: 85%;
+                    }
+                }
             }
         }
     }
     @media only screen and (min-width: 320px) and (max-width: 379px) and (min-height: 450px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .contact{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 230vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            position: relative;
+            padding: 10vh 5vw;
+            z-index: 2;
+            gap: 10vh;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            .contact__form__container{
+                position: relative;
+                width: 90%;
+                height: 100%;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                align-items: flex-end;
         
-                .preloader__loader{
-                    width: 15%;
+                .contact__form{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 4rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-end; 
+        
+                    form{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-start; 
+                        flex-direction: column;
+        
+                        .contact__form__header{
+                            width: 100%;
+                            height: 20%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            .contact__form__header__intro{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                h3{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 2rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 0.8rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                            .contact__form__header__contact{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 1vw;
+                                gap: 1.5vh;
+                                color: #fff; 
+                                
+                                h4{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.1rem;
+                                    text-transform: uppercase;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                a{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1.3rem;
+                                    text-decoration: none;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    // Text gradient implementation
+                                    background: linear-gradient(90deg, #FFF, #039ca4);
+                                    -webkit-background-clip: text;
+                                    background-clip: text;
+                                    color: transparent;
+                                    -webkit-text-fill-color: transparent;
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: right;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__fullname{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            flex-direction: column;
+        
+                            .contact__form__input__fullname__name{
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__fullname__surname{
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__inputs{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            flex-direction: column;
+        
+                            .contact__form__input__inputs__email{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+        
+                            .contact__form__input__inputs__phone{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vw 2.5vw;
+                                gap: 1vh;
+                                color: #fff;
+        
+                                label{ 
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: 'Times New Roman', Times, serif;
+                                    margin: 0;
+                                    color: #ff1d28;
+                                }
+        
+                                input {
+                                    width: 100%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    color: #fff;
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin-left: 1rem;
+                                    
+                                    /* Remove browser default styles */
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    
+                                    /* Remove auto-fill background in Chrome */
+                                    &:-webkit-autofill,
+                                    &:-webkit-autofill:hover,
+                                    &:-webkit-autofill:focus {
+                                        -webkit-text-fill-color: #fff;
+                                        transition: background-color 5000s ease-in-out 0s;
+                                        box-shadow: 0 0 0px 1000px transparent inset;
+                                    }
+                                    
+                                    /* Placeholder styling */
+                                    &::placeholder {
+                                        color: #fff;
+                                    
+                                    }
+                                    
+                                    /* Remove focus ring */
+                                    &:focus {
+                                        outline: none;
+                                        border: none;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__message{
+                            width: 100%;
+                            position: relative;
+                            height: 20%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            border: #fff 1px solid;
+                            padding: 2.5vh 2.5vw 0 3.5vw;
+                            gap: 1vh;
+        
+                            .contact__form__input__message__hashtag{
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                padding: 0.5rem 1rem;
+                                width: 100%;
+                                height: 50%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                flex-direction: row;
+                                gap: 0.5rem;
+        
+                                
+                            }
+        
+                            label{ 
+                                font-size: 1.3rem;
+                                font-weight: 300;
+                                text-transform: uppercase;
+                                font-family: 'Times New Roman', Times, serif;
+                                margin: 0;
+                                color: #ff1d28;
+                            }
+        
+                            textarea {
+                                width: 100%;
+                                height: 100%;
+                                background: transparent;
+                                border: none;
+                                outline: none;
+                                box-shadow: none;
+                                padding: 0;
+                                margin: 0;
+                                color: #fff;
+                                font-size: 1.1rem;
+                                font-weight: 300;
+                                font-family: Helvetica;
+                                margin-left: 1rem;
+                                resize: none; 
+                                
+                                /* Remove browser default styles */
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                
+                                /* Remove auto-fill background in Chrome */
+                                &:-webkit-autofill,
+                                &:-webkit-autofill:hover,
+                                &:-webkit-autofill:focus {
+                                    -webkit-text-fill-color: #fff;
+                                    transition: background-color 5000s ease-in-out 0s;
+                                    box-shadow: 0 0 0px 1000px transparent inset;
+                                }
+                                
+                                /* Placeholder styling */
+                                &::placeholder {
+                                    color: #fff; 
+                                    
+                                }
+                                
+                                /* Remove focus ring */
+                                &:focus {
+                                    outline: none;
+                                    border: none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+        
+                        .contact__form__input__send{
+                            width: 100%;
+                            height: 15%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            z-index: 2;
+        
+                            .contact__form__input__send__gdpr{
+                                width: 100%;
+                                height: 70%;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                border: #fff 1px solid;
+                                padding: 1vh 1vw;
+                                gap: 1vh;
+                                color: #fff;
+                                z-index: 1;
+                                .contact__form__input__send__gdpr__link{
+                                    width: 25vw;
+                                    height: 100%;
+                                    text-decoration: none;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    
+                                    .contact__form__input__send__gdpr__link__container {
+                                        position: relative;
+                                        overflow: hidden; 
+                                        width: 100%;
+                                        height: 1.5rem; 
+                                        
+                                        p {
+                                            width: 100%;
+                                            margin: 0;
+                                            padding: 0;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            align-items: flex-end;
+                                            
+                                            &.primary-text {
+                                                position: relative; 
+                                                z-index: 2;
+                                                width: 100%;
+                                                color: #fff;
+                                                span {
+                                                    font-size: 0.9rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block; 
+                                                }
+                                            }
+                                            
+                                            &.secondary-text {
+                                                position: absolute; 
+                                                top: 0;
+                                                right: 0;
+                                                width: 100%;
+                                                z-index: 1;
+                                                color: #ff1d28;
+                                                span {
+                                                    font-size: 1rem;
+                                                    font-weight: 300;
+                                                    font-family: Helvetica;
+                                                    display: inline-block;  
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .divider{
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #ff1d28;
+                                    }
+                                }
+        
+                                p{
+                                    width: 100%;
+                                    text-align: left;
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                }
+                            }
+        
+                            .contact__form__send__button{
+                                width: 100%;
+                                height: 30%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 2;
+        
+                                .cta__button{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
                     }
                 }
+            }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
+            .contact__info{
+                width: 90%;
+                height: 30%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+        
+                .divider{
+                    width: 95%;
+                    height: 1px;
+                    background-color: #fff;
+                }
+        
+                .contact__info__item{
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    color: #fff;
+                    gap: 1vh;
+                    border-bottom: #fff 1px solid;
+        
+                    h3{
                         font-size: 1.6rem;
-                        color: #fff;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        margin: 0;
                     }
-                }   
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+                    a{
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        text-decoration: none; 
+                        color: #fff;
+                        margin: 0;
+                    }
+        
+                    &:nth-of-type(2){
+                        width: 100%;
+                    }
+                    &:nth-of-type(3){
+                        width: 95%;
+                    }
+                    &:nth-of-type(4){
+                        width: 90%;
+                    }
+                    &:nth-of-type(5){
+                        width: 85%;
+                    }
+                }
             }
         }
     }

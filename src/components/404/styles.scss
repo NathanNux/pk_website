@@ -389,367 +389,242 @@
 
 @media (max-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1000px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .pageNotFound{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 2rem;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            h1{
+                margin: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
+                .span{
+                    font-size: 30rem;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
+                    background: linear-gradient(90deg, #fff, #039ca4);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        
+            h2{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .span{
+                    font-size: 4rem;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
+                    font-family: Helvetica
                 }
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 7rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
-                }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
     @media only screen and (min-width: 600px) and (max-width: 990px) and (min-height: 800px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .pageNotFound{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 2rem;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            h1{
+                margin: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
+                .span{
+                    font-size: 26rem;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
+                    background: linear-gradient(90deg, #fff, #039ca4);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        
+            h2{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .span{
+                    font-size: 3rem;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
+                    font-family: Helvetica
                 }
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 7rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
-                }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
     @media only screen and (min-width: 400px) and (max-width: 600px) and (min-height: 700px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .pageNotFound{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 2rem;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            h1{
+                margin: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
+                .span{
+                    font-size: 14rem;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
+                    background: linear-gradient(90deg, #fff, #039ca4);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        
+            h2{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .span{
+                    font-size: 2.5rem;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
                     font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
                 }
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 6rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
-                }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
     @media only screen and (min-width: 380px) and (max-width: 399px) and (min-height: 600px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .pageNotFound{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 2rem;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            h1{
+                margin: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
+                .span{
+                    font-size: 14rem;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
+                    background: linear-gradient(90deg, #fff, #039ca4);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        
+            h2{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .span{
+                    font-size: 2.5rem;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
                     font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
                 }
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 5rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
-                }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
     @media only screen and (min-width: 320px) and (max-width: 379px) and (min-height: 450px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .pageNotFound{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 2rem;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
-                width: 100%;
-                height: 10vh;
+            h1{
+                margin: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
+                .span{
+                    font-size: 12rem;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
+                    background: linear-gradient(90deg, #fff, #039ca4);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        
+            h2{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .span{
+                    font-size: 2rem;
+                    font-weight: 300;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0;
                     font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
                 }
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 4rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
-                }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }

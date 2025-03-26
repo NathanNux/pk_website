@@ -1,3 +1,5 @@
+// add border left to each link item and change the class based on the detection background function
+
 @media (min-aspect-ratio: 1/1) {
     @media only screen and ( min-width: 1730px) {
         .nav{
@@ -755,368 +757,488 @@
 
 @media (max-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1000px) {
-        .preloader{
+        .nav{
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            width: 5vw;
+            height: 85vh;
+            top: 2.5vh;
+            right: 0.5vw;
+            z-index: 60;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 5vh;
+            z-index: 60;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
+            .nav__item{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: relative;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
-        
-                .preloader__loader{
-                    width: 15%;
+                align-items: flex-start;
+                a{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 7rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    text-decoration: none;
+        
+                    h4{
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        overflow: visible;
+                        position: relative;
+                        z-index: 2;
+                        pointer-events: all;
+                        gap: 0.5rem;
+        
+                        .span{
+                            display: inline-block;
+                            height: 1.5rem;
+                            font-size: 2rem;
+                            font-weight: 300;
+                            color: var(--logo-color-on-dark);
+                            text-transform: uppercase;
+                            margin: 0;
+                            z-index: 2;
+                        }
+        
+                        &:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 1;
+                            pointer-events: none;
+                            .span{
+                                color: #ff1d28 !important;
+                                z-index: 1;
+                            }
+                        }
                     }
                 }
+            }
+        }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
+        /* Add this class when on light backgrounds */
+        .nav__item--on-light a {
+            h4{
+                .span{
+                    color: var(--logo-color-on-light);
                 }   
             }
+        }
+        
+        /* Your existing logo style */
+        .logo--on-light a {
+            color: var(--logo-color-on-light);
+        }
+        
+        // Add these new rules
+        .nav__item h4.active-route {
+            color: #ff1d28 !important;
+        }
+        
+        .nav__item h4 .span.active-route-span {
+            color: #ff1d28 !important;
         }
     }
     @media only screen and (min-width: 600px) and (max-width: 990px) and (min-height: 800px) {
-        .preloader{
+        .nav{
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            width: 5vw;
+            height: 85vh;
+            top: 2.5vh;
+            right: 0.5vw;
+            z-index: 60;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 7.5vh;
+            z-index: 60;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
+            .nav__item{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: relative;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
-        
-                .preloader__loader{
-                    width: 15%;
+                align-items: flex-start;
+                a{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 7rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    text-decoration: none;
+        
+                    h4{
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        overflow: visible;
+                        position: relative;
+                        z-index: 2;
+                        pointer-events: all;
+                        gap: 0.5rem;
+        
+                        .span{
+                            display: inline-block;
+                            height: 1.5rem;
+                            font-size: 2rem;
+                            font-weight: 300;
+                            color: var(--logo-color-on-dark);
+                            text-transform: uppercase;
+                            margin: 0;
+                            z-index: 2;
+                        }
+        
+                        &:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 1;
+                            pointer-events: none;
+                            .span{
+                                color: #ff1d28 !important;
+                                z-index: 1;
+                            }
+                        }
                     }
                 }
+            }
+        }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
+        /* Add this class when on light backgrounds */
+        .nav__item--on-light a {
+            h4{
+                .span{
+                    color: var(--logo-color-on-light);
                 }   
             }
+        }
+        
+        /* Your existing logo style */
+        .logo--on-light a {
+            color: var(--logo-color-on-light);
+        }
+        
+        // Add these new rules
+        .nav__item h4.active-route {
+            color: #ff1d28 !important;
+        }
+        
+        .nav__item h4 .span.active-route-span {
+            color: #ff1d28 !important;
         }
     }
     @media only screen and (min-width: 400px) and (max-width: 600px) and (min-height: 700px) {
-        .preloader{
+        .nav{
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            width: 5vw;
+            height: 85vh;
+            top: 2.5vh;
+            right: 2.5vw;
+            z-index: 60;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 7.5vh;
+            z-index: 60;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
+            .nav__item{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: relative;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
-        
-                .preloader__loader{
-                    width: 15%;
+                align-items: flex-start;
+                a{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 6rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    text-decoration: none;
+        
+                    h4{
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        overflow: visible;
+                        position: relative;
+                        z-index: 2;
+                        pointer-events: all;
+                        gap: 0.5rem;
+        
+                        .span{
+                            display: inline-block;
+                            height: 1.1rem;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            color: var(--logo-color-on-dark);
+                            text-transform: uppercase;
+                            margin: 0;
+                            z-index: 2;
+                        }
+        
+                        &:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 1;
+                            pointer-events: none;
+                            .span{
+                                color: #ff1d28 !important;
+                                z-index: 1;
+                            }
+                        }
                     }
                 }
+            }
+        }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
+        /* Add this class when on light backgrounds */
+        .nav__item--on-light a {
+            h4{
+                .span{
+                    color: var(--logo-color-on-light);
                 }   
             }
+        }
+        
+        /* Your existing logo style */
+        .logo--on-light a {
+            color: var(--logo-color-on-light);
+        }
+        
+        // Add these new rules
+        .nav__item h4.active-route {
+            color: #ff1d28 !important;
+        }
+        
+        .nav__item h4 .span.active-route-span {
+            color: #ff1d28 !important;
         }
     }
     @media only screen and (min-width: 380px) and (max-width: 399px) and (min-height: 600px) {
-        .preloader{
+        .nav{
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            width: 5vw;
+            height: 85vh;
+            top: 2.5vh;
+            right: 2.5vw;
+            z-index: 60;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 7.5vh;
+            z-index: 60;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
+            .nav__item{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: relative;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
-        
-                .preloader__loader{
-                    width: 15%;
+                align-items: flex-start;
+                a{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 5rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    text-decoration: none;
+        
+                    h4{
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        overflow: visible;
+                        position: relative;
+                        z-index: 2;
+                        pointer-events: all;
+                        gap: 0.5rem;
+        
+                        .span{
+                            display: inline-block;
+                            height: 1.1rem;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            color: var(--logo-color-on-dark);
+                            text-transform: uppercase;
+                            margin: 0;
+                            z-index: 2;
+                        }
+        
+                        &:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 1;
+                            pointer-events: none;
+                            .span{
+                                color: #ff1d28 !important;
+                                z-index: 1;
+                            }
+                        }
                     }
                 }
+            }
+        }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
+        /* Add this class when on light backgrounds */
+        .nav__item--on-light a {
+            h4{
+                .span{
+                    color: var(--logo-color-on-light);
                 }   
             }
         }
+        
+        /* Your existing logo style */
+        .logo--on-light a {
+            color: var(--logo-color-on-light);
+        }
+        
+        // Add these new rules
+        .nav__item h4.active-route {
+            color: #ff1d28 !important;
+        }
+        
+        .nav__item h4 .span.active-route-span {
+            color: #ff1d28 !important;
+        }
     }
     @media only screen and (min-width: 320px) and (max-width: 379px) and (min-height: 450px) {
-        .preloader{
+        .nav{
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            width: 5vw;
+            height: 85vh;
+            top: 2.5vh;
+            right: 2.5vw;
+            z-index: 60;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            gap: 7.5vh;
+            z-index: 60;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
-        
-                &:nth-of-type(3){
-                    width: 40%;
-                }
-            }
-            .preloader__container{
+            .nav__item{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: relative;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
-                align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
-        
-                .preloader__loader{
-                    width: 15%;
+                align-items: flex-start;
+                a{
+                    width: 50%;
+                    height: 100%;
+                    position: relative;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 4rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    text-decoration: none;
+        
+                    h4{
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        overflow: visible;
+                        position: relative;
+                        z-index: 2;
+                        pointer-events: all;
+                        gap: 0.25rem;
+        
+                        .span{
+                            display: inline-block;
+                            height: 1rem;
+                            font-size: 1.3rem;
+                            font-weight: 300;
+                            color: var(--logo-color-on-dark);
+                            text-transform: uppercase;
+                            margin: 0;
+                            z-index: 2;
+                        }
+        
+                        &:nth-of-type(2){
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 1;
+                            pointer-events: none;
+                            .span{
+                                color: #ff1d28 !important;
+                                z-index: 1;
+                            }
+                        }
                     }
                 }
+            }
+        }
         
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
+        /* Add this class when on light backgrounds */
+        .nav__item--on-light a {
+            h4{
+                .span{
+                    color: var(--logo-color-on-light);
                 }   
             }
+        }
+        
+        /* Your existing logo style */
+        .logo--on-light a {
+            color: var(--logo-color-on-light);
+        }
+        
+        // Add these new rules
+        .nav__item h4.active-route {
+            color: #ff1d28 !important;
+        }
+        
+        .nav__item h4 .span.active-route-span {
+            color: #ff1d28 !important;
         }
     }
 }

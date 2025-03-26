@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-
 const wordAnim2 = {
     initial: { 
         opacity: 0, 
@@ -17,7 +16,7 @@ const wordAnim2 = {
     }),
 }
 
-
+// Standard character-level SplitText
 const SplitText = ({ text, variants }) => {
     return text.split("").map((char, index) => {
       return (
@@ -35,15 +34,34 @@ const SplitText = ({ text, variants }) => {
     });
 };
 
+// New component that splits by words first, then characters
+const SplitWords = ({ text, variants }) => {
+    const words = text.split(" ");
+    
+    return (
+        <div className="words-container">
+            {words.map((word, wordIndex) => (
+                <h2 key={wordIndex} className="word">
+                    {/* Apply SplitText to each word */}
+                    <SplitText 
+                        text={word} 
+                        variants={variants} 
+                    />
+                </h2>
+            ))}
+        </div>
+    );
+};
+
 export default function PageNotFound() {
     return (
         <section className="pageNotFound">
             <h1>
-                <SplitText text="404" variants={ wordAnim2 } />
+                <SplitText text="404" variants={wordAnim2} />
             </h1>
-            <h2>
-                <SplitText text="Stránka nenalezena" variants={ wordAnim2 } />
-            </h2>
+            
+            {/* Replace h2 with the new SplitWords component */}
+            <SplitWords text="Stránka nenalezena" variants={wordAnim2} />
         </section>
     )
 }

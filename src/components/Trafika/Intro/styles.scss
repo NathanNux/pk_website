@@ -699,367 +699,437 @@
 
 @media (max-aspect-ratio: 1/1) {
     @media only screen and (min-width: 1000px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .intro__trafika{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            padding: 5vh 5vw;
+            z-index: 2;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
+            .intro__trafika__content{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                color: #fff;
+                position: relative;
+                gap: 5vw;
+                z-index: 2;
+                h1{
+                    position: relative;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
         
-                &:nth-of-type(3){
-                    width: 40%;
+                    .span{
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        font-size: 8rem;
+                        font-weight: 300;
+                        margin: 0;
+                        letter-spacing: 2.5rem;
+                        // Text gradient implementation
+                        background: linear-gradient(90deg, #FFF, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+        
+                h2{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin: 0 0 2rem 0;
+                    .span{
+                        font-size: 4rem;
+                        font-weight: 300;
+                        margin: 0;
+                        text-transform: capitalize;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
                 }
             }
-            .preloader__container{
+        
+            .intro__trafika__background{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                z-index: 1;
+                overflow: hidden;
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 7rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
+                .intro__trafika__background__container{
+                    width: 240vh; 
+                    height: 120vh; 
+                    position: absolute; 
+                    top: -10%; 
+                    left: -60%; 
+                    scale: 1.02; 
+                    object-fit: cover;
                 }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
     @media only screen and (min-width: 600px) and (max-width: 990px) and (min-height: 800px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .intro__trafika{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            padding: 5vh 5vw;
+            z-index: 2;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
+            .intro__trafika__content{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                color: #fff;
+                position: relative;
+                gap: 5vw;
+                z-index: 2;
+                h1{
+                    position: relative;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
         
-                &:nth-of-type(3){
-                    width: 40%;
+                    .span{
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        font-size: 5rem;
+                        font-weight: 300;
+                        margin: 0;
+                        letter-spacing: 2.5rem;
+                        // Text gradient implementation
+                        background: linear-gradient(90deg, #FFF, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+        
+                h2{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin: 0;
+                    .span{
+                        font-size: 3rem;
+                        font-weight: 300;
+                        margin: 0;
+                        text-transform: capitalize;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
                 }
             }
-            .preloader__container{
+        
+            .intro__trafika__background{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                z-index: 1;
+                overflow: hidden;
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 7rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
+                .intro__trafika__background__container{
+                    width: 240vh; 
+                    height: 120vh; 
+                    position: absolute; 
+                    top: -10%; 
+                    left: -70%; 
+                    scale: 1.02; 
+                    object-fit: cover;
                 }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
     @media only screen and (min-width: 400px) and (max-width: 600px) and (min-height: 700px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .intro__trafika{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            padding: 5vh 5vw;
+            z-index: 2;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
+            .intro__trafika__content{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                color: #fff;
+                position: relative;
+                gap: 5vw;
+                z-index: 2;
+                h1{
+                    position: relative;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
         
-                &:nth-of-type(3){
-                    width: 40%;
+                    .span{
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        font-size: 4rem;
+                        font-weight: 300;
+                        margin: 0;
+                        letter-spacing: 0.5rem;
+                        // Text gradient implementation
+                        background: linear-gradient(90deg, #FFF, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+        
+                h2{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin: 0;
+                    .span{
+                        font-size: 2.5rem;
+                        font-weight: 300;
+                        margin: 0;
+                        text-transform: capitalize;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
                 }
             }
-            .preloader__container{
+        
+            .intro__trafika__background{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                z-index: 1;
+                overflow: hidden;
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 6rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
+                .intro__trafika__background__container{
+                    width: 240vh; 
+                    height: 120vh; 
+                    position: absolute; 
+                    top: -10%; 
+                    left: -100%; 
+                    scale: 1.02; 
+                    object-fit: cover;
                 }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
     @media only screen and (min-width: 380px) and (max-width: 399px) and (min-height: 600px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .intro__trafika{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            padding: 5vh 5vw;
+            z-index: 2;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
+            .intro__trafika__content{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                color: #fff;
+                position: relative;
+                gap: 5vw;
+                z-index: 2;
+                h1{
+                    position: relative;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
         
-                &:nth-of-type(3){
-                    width: 40%;
+                    .span{
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        font-size: 3.5rem;
+                        font-weight: 300;
+                        margin: 0;
+                        letter-spacing: 0.5rem;
+                        // Text gradient implementation
+                        background: linear-gradient(90deg, #FFF, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+        
+                h2{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin: 0;
+                    .span{
+                        font-size: 2.5rem;
+                        font-weight: 300;
+                        margin: 0;
+                        text-transform: capitalize;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
                 }
             }
-            .preloader__container{
+        
+            .intro__trafika__background{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                z-index: 1;
+                overflow: hidden;
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 5rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
+                .intro__trafika__background__container{
+                    width: 240vh; 
+                    height: 120vh; 
+                    position: absolute; 
+                    top: -10%; 
+                    left: -110%; 
+                    scale: 1.02; 
+                    object-fit: cover;
                 }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
     @media only screen and (min-width: 320px) and (max-width: 379px) and (min-height: 450px) {
-        .preloader{
-            position: fixed;
-            top: 0;
-            left: 0;
+        .intro__trafika{
             width: 100vw;
-            overflow: hidden;
-            height: 100%;
+            height: 100vh;
+            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            flex-direction: column;
-            z-index: 9999;
-            gap: 1vh;
+            padding: 5vh 5vw;
+            z-index: 2;
+            overflow: hidden;
         
-            .preloader__divider{
-                width: 70%;
-                height: 2px;
-                background-color: #fff;
+            .intro__trafika__content{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                color: #fff;
+                position: relative;
+                gap: 5vw;
+                z-index: 2;
+                h1{
+                    position: relative;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
         
-                &:nth-of-type(3){
-                    width: 40%;
+                    .span{
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        font-size: 3rem;
+                        font-weight: 300;
+                        margin: 0;
+                        letter-spacing: 0.5rem;
+                        // Text gradient implementation
+                        background: linear-gradient(90deg, #FFF, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+        
+                h2{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin: 0;
+                    .span{
+                        font-size: 2rem;
+                        font-weight: 300;
+                        margin: 0;
+                        text-transform: capitalize;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
                 }
             }
-            .preloader__container{
+        
+            .intro__trafika__background{
                 width: 100%;
-                height: 10vh;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                gap: 5vw;
-                .perloader__text1{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{  
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }
+                z-index: 1;
+                overflow: hidden;
         
-                .preloader__loader{
-                    width: 15%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    h1{
-                        font-size: 4rem;
-                        font-family: 'Times New Roman', Times, serif;
-                        font-weight: 300;
-                        color: #fff;
-                    }
+                .intro__trafika__background__container{
+                    width: 240vh; 
+                    height: 120vh; 
+                    position: absolute; 
+                    top: -10%; 
+                    left: -90%; 
+                    scale: 1.02; 
+                    object-fit: cover;
                 }
-        
-                .perloader__text2{
-                    width: 35%;
-                    display: none;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-family: Helvetica;
-                    overflow: hidden;
-                    p{
-                        font-size: 1.6rem;
-                        color: #fff;
-                    }
-                }   
             }
         }
     }
