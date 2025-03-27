@@ -12,9 +12,43 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Pavel Kovanda - Trafika stranka</title>
-        <meta name="description" content="Osobní webové strány Pavla Kovandy - trafika a jeji informace" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Kontakt | Pavel Kovanda - Instalatér & Trafika</title>
+        <meta name="description" content="Kontaktujte Pavla Kovandu pro instalatérské práce v Lounech a okolí. Rychlá reakce, profesionální přístup a férové ceny." />
+        <meta name="keywords" content="kontakt instalatér, kontakt trafika, telefon, email, adresa, Louny, Pavel Kovanda" />
+        <meta name="author" content="Pavel Kovanda" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://pavelkovanda.cz/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pavelkovanda.cz/contact" />
+        <meta property="og:title" content="Kontakt | Pavel Kovanda" />
+        <meta property="og:description" content="Potřebujete instalatéra nebo hledáte trafiku v Lounech? Kontaktujte Pavla Kovandu." />
+        <meta property="og:image" content="https://pavelkovanda.cz/images/contact-og.jpg" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://pavelkovanda.cz/contact" />
+        <meta property="twitter:title" content="Kontakt | Pavel Kovanda" />
+        <meta property="twitter:description" content="Instalatérské služby a trafika v Lounech - kontaktní informace." />
+        <meta property="twitter:image" content="https://pavelkovanda.cz/images/contact-twitter.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Kontaktní stránka Pavel Kovanda",
+            "url": "https://pavelkovanda.cz/contact",
+            "mainEntity": {
+              "@type": "Person",
+              "name": "Pavel Kovanda",
+              "telephone": "+420XXXXXXXXX",
+              "email": "info@pavelkovanda.cz",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Ulice XX",
+                "addressLocality": "Louny",
+                "postalCode": "44001",
+                "addressCountry": "CZ"
+              }
+            }
+          })}
+        </script>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="main" style={{ overflowX: "hidden" }}>
