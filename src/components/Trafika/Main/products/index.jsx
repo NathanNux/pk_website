@@ -66,11 +66,11 @@ const products = [
 
 ]
 
-const SplitText = ({text, isTextHovered, itemIndex}) => {
+const SplitText = ({text, isTextHovered, itemIndex, isTouch}) => {
     
     const textAnimation = {
         initial: (i) => ({
-            y: 50,
+            y: isTouch ? 0 : 50, // No animation on touch devices
             transition: {
                 duration: 0.3,
                 ease: [0.76, 0, 0.24, 1],
@@ -87,7 +87,9 @@ const SplitText = ({text, isTextHovered, itemIndex}) => {
         })
     }
 
-    const isActive = isTextHovered.active && isTextHovered.index === itemIndex;
+    // Always show text as active on touch devices
+    const isActive = isTouch || (isTextHovered.active && isTextHovered.index === itemIndex);
+    
     return (
         text.split('').map((char, index) => {
             return (
@@ -141,12 +143,20 @@ const SplitWords = ({ text, variants }) => {
     })
 }
 
+// Add touch detection function
+const isTouchDevice = () => {
+    if (typeof window === 'undefined') return false;
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  };
+
 export default function Products() {
     // State for hover and text effects
     const [isHovered, setIsHovered] = useState(false);
     const [isTextHovered, setIsTextHovered] = useState({ active: false, index: 0 });
     const [isDragging, setIsDragging] = useState(false);
     
+    const [isTouch, setIsTouch] = useState(false);
+
     // Refs for measuring
     const containerRef = useRef(null);
     const carouselRef = useRef(null);
@@ -158,6 +168,10 @@ export default function Products() {
     // Calculate total margin for items
     const itemMarginRight = 20;
     const totalItemMargins = itemMarginRight * (products.length - 1);
+
+    useEffect(() => {
+        setIsTouch(isTouchDevice());
+    }, []);
     
     // Measure widths on mount and resize
     useEffect(() => {
@@ -180,6 +194,7 @@ export default function Products() {
         };
     }, [totalItemMargins]);
 
+    
     return (
         <section className="trafika__products">
             <div className="trafika__products__title">
@@ -188,7 +203,8 @@ export default function Products() {
                 </h3>
             </div>
 
-            <Cursor isHovered={isHovered} isDragging={isDragging} />
+            {/* Only show cursor on non-touch devices */}
+            {!isTouch && <Cursor isHovered={isHovered} isDragging={isDragging} />}
 
             <div 
                 ref={containerRef}
@@ -210,8 +226,8 @@ export default function Products() {
                     }}
                     onDragStart={() => setIsDragging(true)}
                     onDragEnd={() => setIsDragging(false)}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
+                    onMouseEnter={() => !isTouch && setIsHovered(true)}
+                    onMouseLeave={() => !isTouch && setIsHovered(false)}
                 >
                     {products.map((product, index) => {
                         const { src, alt, name, description } = product;
@@ -219,8 +235,8 @@ export default function Products() {
                             <div 
                                 key={index} 
                                 className="trafika__products__list__item"
-                                onMouseEnter={() => setIsTextHovered({ active: true, index: index })}
-                                onMouseLeave={() => setIsTextHovered({ active: false, index: index })}
+                                onMouseEnter={() => !isTouch && setIsTextHovered({ active: true, index: index })}
+                                onMouseLeave={() => !isTouch && setIsTextHovered({ active: false, index: index })}
                             >
                                 <div className="trafika__products__list__item__container">
                                     <div className="trafika__products__list__item__image">
@@ -232,7 +248,10 @@ export default function Products() {
                                                 top: 0,
                                                 left: 0,
                                                 zIndex: 1,
-                                                backgroundColor: isTextHovered.active && isTextHovered.index === index ? 'transparent' : 'rgba(0, 0, 0, 0.25)',
+                                                // Make overlay transparent on touch devices
+                                                backgroundColor: isTouch || (isTextHovered.active && isTextHovered.index === index) 
+                                                    ? 'transparent' 
+                                                    : 'rgba(0, 0, 0, 0.25)',
                                                 transition: 'background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1)'
                                             }}
                                         />
@@ -251,6 +270,7 @@ export default function Products() {
                                                 text={name} 
                                                 isTextHovered={isTextHovered}
                                                 itemIndex={index}
+                                                isTouch={isTouch}
                                             />
                                         </motion.h5>
                                         <motion.p>
@@ -258,6 +278,7 @@ export default function Products() {
                                                 text={description} 
                                                 isTextHovered={isTextHovered}
                                                 itemIndex={index}
+                                                isTouch={isTouch}
                                             />
                                         </motion.p>
                                     </motion.div>

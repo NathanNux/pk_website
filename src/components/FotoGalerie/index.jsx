@@ -229,13 +229,23 @@ const titleAnim = {
     }),
 }
 
+const isTouchDevice = () => {
+    if (typeof window === 'undefined') return false;
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+};
+
 
 export default function FotoGalerie() {
     const [isTextHovered, setIsTextHovered] = useState({ active: false, index: 0 });
     const [ isHovered, setIsHovered ] = useState({ active: false, index: 0 });
     const itemRefs = useRef([]);
     const { slideLoad } = useGlobalContext();
+    const [isTouch, setIsTouch] = useState(false);
     
+    useEffect(() => {
+        setIsTouch(isTouchDevice());
+    }, []);
+
 
 
     const mouseHover = (index) => {
@@ -259,21 +269,34 @@ export default function FotoGalerie() {
         fotoGaleriePics.map(() => 0.8 + Math.random() * 0.7)
     );
 
+    // Modify animations based on device type
+    const modifiedProductAnim = isTouch ? {
+        initial: { opacity: 1, y: 0, scale: 1 },
+        enter: { opacity: 1, y: 0, scale: 1 }
+    } : (slideLoad ? productAnim : productAnim2);
+
+    // Modify title animation for touch devices
+    const modifiedTitleAnim = isTouch ? {
+        initial: { opacity: 1, x: 0, y: 0 },
+        enter: { opacity: 1, x: 0, y: 0 }
+    } : (slideLoad ? titleAnim : titleAnim2);
+
 
     return (
         <section className="fotoGalerie">
             <BackgroundGradient />
             <div className="fotoGalerie__header">
                 <h1>
-                    <SplitPairs text="Fotogalerie" variants={slideLoad ? titleAnim : titleAnim2 } />
+                    <SplitPairs text="Fotogalerie" variants={modifiedTitleAnim} />
                 </h1>
             </div>
-            <Cursor isHovered={isHovered.active} />
+            {/* Only show cursor on non-touch devices */}
+            {!isTouch && <Cursor isHovered={isHovered.active} />}
             <motion.div 
                 className="fotoGalerie__images"
                 initial="initial"
                 animate="enter"
-                variants={slideLoad ? productAnim : productAnim2} 
+                variants={modifiedProductAnim} 
             >
                 <div className="fotoGalerie__images__container">
                     {fotoGaleriePics.map((pic, index) => {
@@ -289,7 +312,8 @@ export default function FotoGalerie() {
                         const y = useTransform(
                             scrollYProgress, 
                             [0, 1], 
-                            [70 * factor, -100 * factor]  // More pronounced effect
+                            // Disable parallax on touch devices
+                            isTouch ? [0, 0] : [70 * factor, -100 * factor]
                         );
                         return (
                             <div 
@@ -322,7 +346,10 @@ export default function FotoGalerie() {
                                         top: 0,
                                         left: 0,
                                         zIndex: 1,
-                                        backgroundColor: isTextHovered.active && isTextHovered.index === index ? 'transparent' : 'rgba(0, 0, 0, 0.25)',
+                                        // Always semi-transparent on touch devices to make text visible
+                                        backgroundColor: (isTouch || (isTextHovered.active && isTextHovered.index === index)) 
+                                            ? 'transparent' 
+                                            : 'rgba(0, 0, 0, 0.25)',
                                         transition: 'background-color 0.3s cubic-bezier(0.76, 0, 0.24, 1)'
                                     }}
                                 />
@@ -330,14 +357,14 @@ export default function FotoGalerie() {
                                     <h2>
                                         <SplitText 
                                             text={title} 
-                                            isTextHovered={isTextHovered}
+                                            isTextHovered={isTouch ? { active: true, index } : isTextHovered}
                                             itemIndex={index}
                                         />
                                     </h2>
                                     <p>
                                         <SplitText 
                                             text={desc} 
-                                            isTextHovered={isTextHovered}
+                                            isTextHovered={isTouch ? { active: true, index } : isTextHovered}
                                             itemIndex={index}
                                         />
                                     </p>
