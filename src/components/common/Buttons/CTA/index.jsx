@@ -73,7 +73,7 @@ export default function CTAButton({ ctaText, onClick, isActive }) {
   //I want anim to go on initial left, on hover to center and on leave to right, so this how it ill be created
 
   const clickEvent = () => {
-    // onClick();
+    onClick();
     setBgActive(prev => !prev);
   }
 

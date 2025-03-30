@@ -12,6 +12,8 @@ import { AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
+import { Toaster } from "sonner";
+
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -69,6 +71,7 @@ export default function App({ Component, pageProps }) {
             </AnimatePresence>
           </LoadProvider>
       </CookiesProvider>
+      <Toaster position="top-center" richColors closeButton={false} toastOptions={{ duration: 3000 }} />
     </>
   );
 }

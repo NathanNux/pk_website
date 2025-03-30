@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useGlobalContext } from "@/context/globalContext";
+import { toast } from "sonner";
 
 const contactInfo = [
     {
@@ -138,10 +139,72 @@ const SplitText = ({ text, active, variants }) => {
 };
 
 export default function Contact() {
-
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
     const [isHovered, setIsHovered] = useState(false);
     const { slideLoad } = useGlobalContext();
     const router = useRouter();
+
+    const handleSubmit = async (e) => {
+        if (e) e.preventDefault(); // Přidejte toto, aby se formulář neodesílal standardně
+        
+        if (!formData.name || !formData.email || !formData.message) {
+            toast.error("Vyplňte prosím povinná pole: jméno, email a zprávu");
+            return;
+        }
+        
+        // Zobrazíme notifikaci o probíhajícím odesílání
+        const loadingToast = toast.loading("Odesílání zprávy...");
+
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                toast.success("Email byl úspěšně odeslán!", {
+                    id: loadingToast,
+                    description: "Děkujeme za váš dotaz. Brzy se vám ozveme."
+                });                
+                
+                setFormData({
+                    name: '',
+                    surname: '',
+                    email: '',
+                    phone: '',
+                    message: ''
+                });
+            } else {
+                toast.error(`Chyba: ${data.message}`, {
+                    id: loadingToast
+                });            }
+        } catch (error) {
+            console.error('Chyba při odesílání:', error);
+            toast.error("Nastala chyba při odesílání emailu.", {
+                id: loadingToast,
+                description: "Zkuste to prosím později nebo nás kontaktujte telefonicky."
+            });
+        }
+    };
+
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [id]: value
+        }));
+    };
+
     return (
         <motion.section
             className="contact"
@@ -177,26 +240,26 @@ export default function Contact() {
                         <div className="contact__form__input__fullname">
                             <div className="contact__form__input__fullname__name">
                                 <label htmlFor="name">Jméno</label>
-                                <input type="text" id="name" name="name" placeholder="Vaše křestné jméno"/>
+                                <input type="text" id="name" name="name" placeholder="Vaše křestné jméno" onChange={handleInputChange} value={formData.name}/>
                             </div>
                             <div className="contact__form__input__fullname__surname">
                                 <label htmlFor="surname">Příjmení</label>
-                                <input type="text" id="surname" name="surname" placeholder="Vaše příjmení"/>
+                                <input type="text" id="surname" name="surname" placeholder="Vaše příjmení" onChange={handleInputChange} value={formData.surname}/>
                             </div>
                         </div>
                         <div className="contact__form__input__inputs">
                             <div className="contact__form__input__inputs__email">
                                 <label htmlFor="email">E-mail</label>
-                                <input type="email" id="email" name="email" placeholder="Váš e-mail"/>
+                                <input type="email" id="email" name="email" placeholder="Váš e-mail" onChange={handleInputChange} value={formData.email}/>
                             </div>
                             <div className="contact__form__input__inputs__phone">
                                 <label htmlFor="phone">Tel. číslo</label>
-                                <input type="tel" id="phone" name="phone" placeholder="Váše tel. číslo"/>
+                                <input type="tel" id="phone" name="phone" placeholder="Váše tel. číslo" onChange={handleInputChange} value={formData.phone}/>
                             </div>
                         </div>
                         <div className="contact__form__input__message">
                             <label htmlFor="message">Vaše zpráva</label>
-                            <textarea id="message" name="message" placeholder="Zde napište svou zprávu"/>
+                            <textarea id="message" name="message" placeholder="Zde napište svou zprávu" onChange={handleInputChange} value={formData.message}/>
                             <div className="contact__form__input__message__hashtag">
                                 <HashtagButton text="#instalace" />
                                 <HashtagButton text="#trafika" />
@@ -231,7 +294,7 @@ export default function Contact() {
                                 </Link>
                             </div>
                             <div className="contact__form__send__button">
-                                <CTAButton ctaText="Poslat" />
+                                <CTAButton ctaText="Poslat" onClick={handleSubmit}/>
                             </div>
                         </div>
                     </form>
