@@ -5,10 +5,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
   
-  const { name, surname, email, phone, message } = req.body;
-  const resend = new Resend("re_VXvt1hvB_PbbEMozHE9Rh3RN8n6KgC1iY");
+  const { name, surname, email, phone, message, hashtags = [] } = req.body;
   
-  // Vytvoření HTML verze e-mailu
+  // Use environment variable for API key
+  const resend = new Resend(process.env.RESEND_API_KEY || "re_VXvt1hvB_PbbEMozHE9Rh3RN8n6KgC1iY");
+  
+  // Format subject line with hashtags
+  const hashtagsText = hashtags.length > 0 ? ` - ${hashtags.join(' ')}` : '';
+  const subjectLine = `Nová zpráva od ${name} ${surname || ''}${hashtagsText}`;
+  
+  // Add hashtags to the HTML template
   const htmlContent = `
     <!DOCTYPE html>
     <html>
@@ -16,50 +22,20 @@ export default async function handler(req, res) {
       <meta charset="utf-8">
       <title>Nová zpráva z kontaktního formuláře</title>
       <style>
-        body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          line-height: 1.6;
-          color: #333;
-          max-width: 600px;
-          margin: 0 auto;
-          padding: 20px;
+        /* Existing styles... */
+        .hashtags {
+          margin-top: 15px;
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
         }
-        .header {
-          background-color: #1a237e;
-          color: white;
-          padding: 20px;
-          text-align: center;
-          border-radius: 5px 5px 0 0;
-        }
-        .content {
-          padding: 20px;
-          background-color: #f9f9f9;
-          border: 1px solid #ddd;
-        }
-        .footer {
-          text-align: center;
-          padding: 10px;
-          font-size: 12px;
-          color: #666;
-        }
-        .field {
-          margin-bottom: 15px;
-          border-bottom: 1px solid #eee;
-          padding-bottom: 10px;
-        }
-        .label {
+        .hashtag {
+          background-color: #f0f0f0;
+          color: #1a237e;
+          padding: 5px 10px;
+          border-radius: 15px;
+          font-size: 14px;
           font-weight: bold;
-          color: #555;
-          margin-right: 10px;
-        }
-        .value {
-          color: #000;
-        }
-        .message-box {
-          background-color: white;
-          border-left: 4px solid #1a237e;
-          padding: 15px;
-          margin-top: 20px;
         }
       </style>
     </head>
@@ -80,6 +56,14 @@ export default async function handler(req, res) {
           <span class="label">Telefon:</span>
           <span class="value">${phone || 'Neuvedeno'}</span>
         </div>
+        ${hashtags.length > 0 ? `
+        <div class="field">
+          <span class="label">Kategorie:</span>
+          <div class="hashtags">
+            ${hashtags.map(tag => `<span class="hashtag">${tag}</span>`).join('')}
+          </div>
+        </div>
+        ` : ''}
         <div class="message-box">
           <h3>Zpráva:</h3>
           <p>${message.replace(/\n/g, '<br>') || 'Prázdná zpráva'}</p>
@@ -93,19 +77,20 @@ export default async function handler(req, res) {
   `;
   
   try {
-    console.log('Odesílám email s daty:', { name, surname, email, phone, message });
+    console.log('Odesílám email s daty:', { name, surname, email, phone, message, hashtags });
 
     const result = await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: 'gekoncicek@gmail.com',
       reply_to: email,
-      subject: `Nová zpráva od ${name} ${surname || ''}`,
+      subject: subjectLine,
       html: htmlContent,
-      // Zachováme také textovou verzi pro e-mailové klienty, které nepodporují HTML
+      // Also include hashtags in the text version
       text: `Jméno: ${name} ${surname || ''}
-Telefon: ${phone || ''}
-Email: ${email || ''}
-Zpráva: ${message || ''}`,
+        Telefon: ${phone || ''}
+        Email: ${email || ''}
+        ${hashtags.length > 0 ? `Kategorie: ${hashtags.join(', ')}\n` : ''}
+        Zpráva: ${message || ''}`,
     });
 
     console.log('Výsledek Resend API:', result);

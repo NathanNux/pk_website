@@ -141,16 +141,26 @@ const SplitText = ({ text, active, variants }) => {
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
+        surname: '',
         email: '',
         phone: '',
         message: ''
     });
+    const [ selectedHashtags, setSelectedHashtags ] = useState([]);
     const [isHovered, setIsHovered] = useState(false);
     const { slideLoad } = useGlobalContext();
     const router = useRouter();
 
+    const handleHashtagClick = (hashtag, isSelected) => {
+        if(isSelected) {
+            setSelectedHashtags(prev => [...prev, hashtag]);
+        } else {
+            setSelectedHashtags(prev => prev.filter(item => item !== hashtag));
+        }
+    }
+
     const handleSubmit = async (e) => {
-        if (e) e.preventDefault(); // Přidejte toto, aby se formulář neodesílal standardně
+        if (e) e.preventDefault(); 
         
         if (!formData.name || !formData.email || !formData.message) {
             toast.error("Vyplňte prosím povinná pole: jméno, email a zprávu");
@@ -161,12 +171,17 @@ export default function Contact() {
         const loadingToast = toast.loading("Odesílání zprávy...");
 
         try {
+
+            const requestData = {
+                ...formData,
+                hashtags: selectedHashtags
+            }
             const response = await fetch('/api/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(requestData),
             });
             
             const data = await response.json();
@@ -184,6 +199,7 @@ export default function Contact() {
                     phone: '',
                     message: ''
                 });
+                setSelectedHashtags([]);
             } else {
                 toast.error(`Chyba: ${data.message}`, {
                     id: loadingToast
@@ -261,9 +277,21 @@ export default function Contact() {
                             <label htmlFor="message">Vaše zpráva</label>
                             <textarea id="message" name="message" placeholder="Zde napište svou zprávu" onChange={handleInputChange} value={formData.message}/>
                             <div className="contact__form__input__message__hashtag">
-                                <HashtagButton text="#instalace" />
-                                <HashtagButton text="#trafika" />
-                                <HashtagButton text="#dotaz" />
+                                <HashtagButton 
+                                    text="#instalace" 
+                                    onClick={() => handleHashtagClick("#instalace", !selectedHashtags.includes("#instalace"))}
+                                    isActive={selectedHashtags.includes("#instalace")}
+                                />
+                                <HashtagButton 
+                                    text="#trafika" 
+                                    onClick={() => handleHashtagClick("#trafika", !selectedHashtags.includes("#trafika"))}
+                                    isActive={selectedHashtags.includes("#trafika")}
+                                />
+                                <HashtagButton 
+                                    text="#dotaz" 
+                                    onClick={() => handleHashtagClick("#dotaz", !selectedHashtags.includes("#dotaz"))}
+                                    isActive={selectedHashtags.includes("#dotaz")}
+                                />
                             </div>
                         </div>
                         <div className="contact__form__input__send">
