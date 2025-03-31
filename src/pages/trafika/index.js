@@ -34,34 +34,29 @@ export default function TrafikaPage() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Store",
-            "name": "Trafika Pavel Kovanda",
-            "image": "https://pavelkovanda.cz/images/trafika.jpg",
-            "url": "https://pavelkovanda.cz/trafika",
-            "telephone": "+420XXXXXXXXX",
+            "@type": "LocalBusiness",
+            "name": "Pavel Kovanda - Instalatérské služby & Trafika - Trafika Page",
+            "image": "https://pavelkovanda.cz/images/logo.jpg",
+            "url": "https://pavelkovanda.cz",
+            "telephone": "+420602175680",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Ulice XX",
-              "addressLocality": "Louny",
-              "postalCode": "44001",
+              "streetAddress": "Jablonského 402/18",
+              "addressLocality": "Písek",
+              "postalCode": "39701",
               "addressCountry": "CZ"
             },
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "07:00",
+                "opens": "09:00",
                 "closes": "17:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Saturday"],
-                "opens": "08:00",
-                "closes": "12:00"
               }
             ],
+            "priceRange": "$",
             "sameAs": [
-              "https://facebook.com/PavelKovandaInstalaterTrafika"
+              "https://www.facebook.com/profile.php?id=61557461697885"
             ]
           })}
         </script>

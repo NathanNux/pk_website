@@ -37,15 +37,15 @@ export default function ContactPage() {
             "mainEntity": {
               "@type": "Person",
               "name": "Pavel Kovanda",
-              "telephone": "+420XXXXXXXXX",
-              "email": "info@pavelkovanda.cz",
+              "telephone": "+420602175680",
+              "email": "kovanda28@seznam.cz",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Ulice XX",
-                "addressLocality": "Louny",
-                "postalCode": "44001",
+                "streetAddress": "Jablonského 402/18",
+                "addressLocality": "Písek",
+                "postalCode": "39701",
                 "addressCountry": "CZ"
-              }
+            },
             }
           })}
         </script>

@@ -28,7 +28,7 @@ export default function Home() {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://pavelkovanda.cz" />
         <meta property="twitter:title" content="Pavel Kovanda | Instalatér & Trafika Louny" />
-        <meta property="twitter:description" content="Instalatér s letitou praxí a vlastník trafiky v Lounech." />
+        <meta property="twitter:description" content="Instalatér s letitou praxí a vlastník trafiky v Písku, Jih." />
         <meta property="twitter:image" content="https://pavelkovanda.cz/images/twitter-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -37,25 +37,25 @@ export default function Home() {
             "name": "Pavel Kovanda - Instalatérské služby & Trafika",
             "image": "https://pavelkovanda.cz/images/logo.jpg",
             "url": "https://pavelkovanda.cz",
-            "telephone": "+420XXXXXXXXX",
+            "telephone": "+420602175680",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Ulice XX",
-              "addressLocality": "Louny",
-              "postalCode": "44001",
+              "streetAddress": "Jablonského 402/18",
+              "addressLocality": "Písek",
+              "postalCode": "39701",
               "addressCountry": "CZ"
             },
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "08:00",
+                "opens": "09:00",
                 "closes": "17:00"
               }
             ],
-            "priceRange": "$$",
+            "priceRange": "$",
             "sameAs": [
-              "https://facebook.com/PavelKovandaInstalaterTrafika"
+              "https://www.facebook.com/profile.php?id=61557461697885"
             ]
           })}
         </script>
