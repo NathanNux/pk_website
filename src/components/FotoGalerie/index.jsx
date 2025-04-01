@@ -3,80 +3,8 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useSpring, useMotionValue, useScroll, useTransform } from "framer-motion";
 import BackgroundGradient from "../common/Backgroundwhite";
 import { useGlobalContext } from "@/context/globalContext";
+import { fotoGaleriePics } from "@/constants";
 
-
-const fotoGaleriePics = [
-    {
-        id: 1,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 1",
-        title: "FotoGalerie 1",
-        desc: "FotoGalerie 1"
-    },
-    {
-        id: 2,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 2",
-        title: "FotoGalerie 2",
-        desc: "FotoGalerie 2"
-    },
-    {
-        id: 3,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 3",
-        title: "FotoGalerie 3",
-        desc: "FotoGalerie 3"
-    },
-    {
-        id: 4,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 4",
-        title: "FotoGalerie 4",
-        desc: "FotoGalerie 4"
-    },
-    {
-        id: 5,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 5",
-        title: "FotoGalerie 5",
-        desc: "FotoGalerie 5"
-    },
-    {
-        id: 6,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 6",
-        title: "FotoGalerie 6",
-        desc: "FotoGalerie 6"
-    },
-    {
-        id: 7,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 7",
-        title: "FotoGalerie 7",
-        desc: "FotoGalerie 7"
-    },
-    {
-        id: 8,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 8",
-        title: "FotoGalerie 8",
-        desc: "FotoGalerie 8"
-    },
-    {
-        id: 9,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 9",
-        title: "FotoGalerie 9",
-        desc: "FotoGalerie 9"
-    },
-    {
-        id: 10,
-        src: "/images/vertical.png",
-        alt: "FotoGalerie 10",
-        title: "FotoGalerie 10",
-        desc: "FotoGalerie 10"
-    }
-]
 const SplitText = ({text, isTextHovered, itemIndex}) => {
     
     const textAnimation = {
