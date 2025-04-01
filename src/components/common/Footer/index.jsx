@@ -330,7 +330,7 @@ const Footer = forwardRef((props, ref ) => {
                             return (
                                 <div className="footer__links__main__item" key={index}>
                                     <Link 
-                                    className="footer__links__main__item__link"
+                                        className="footer__links__main__item__link"
                                         key={index}
                                         href={href}
                                         onMouseEnter={() => setActive({ active: true, index })}
