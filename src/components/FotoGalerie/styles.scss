@@ -2,7 +2,7 @@
     @media only screen and ( min-width: 1730px) {
         .fotoGalerie{
             width: 100vw;
-            height: 400vh;
+            height: 300vh;
             position: relative;
             display: flex;
             justify-content: center;
@@ -43,7 +43,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -66,110 +66,122 @@
                 }
             }
         
-            .fotoGalerie__images{
-                width: 100%;
+            .fotoGalerie__gallery{
+                width: 80%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     position: relative;
-                    flex-wrap: wrap;
                     gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 35vw;
-                        height: 80vh;
-                        position: relative;
+                    
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 25vw;
+                            height: 60vh;
+                            position: relative;
                             display: flex;
+                            justify-content: center;
                             align-items: flex-end;
-                            justify-content: space-between;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            h2{
-                                font-size: 2rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            cursor:crosshair;
+
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.5rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 1vh;
+                                h2{
+                                    font-size: 2rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -181,7 +193,7 @@
     @media only screen and (min-width: 1598px) and (max-width: 1729px) {
         .fotoGalerie{
             width: 100vw;
-            height: 400vh;
+            height: 300vh;
             position: relative;
             display: flex;
             justify-content: center;
@@ -222,7 +234,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -245,110 +257,122 @@
                 }
             }
         
-            .fotoGalerie__images{
-                width: 100%;
+            .fotoGalerie__gallery{
+                width: 80%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     position: relative;
-                    flex-wrap: wrap;
                     gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 35vw;
-                        height: 80vh;
-                        position: relative;
+                    
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 25vw;
+                            height: 60vh;
+                            position: relative;
                             display: flex;
+                            justify-content: center;
                             align-items: flex-end;
-                            justify-content: space-between;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            h2{
-                                font-size: 2rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            cursor:crosshair;
+
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.5rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 1vh;
+                                h2{
+                                    font-size: 2rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.5rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -360,7 +384,7 @@
     @media only screen and (min-width: 1420px) and (max-width: 1596px) and (min-height: 820px) {
         .fotoGalerie{
             width: 100vw;
-            height: 400vh;
+            height: 300vh;
             position: relative;
             display: flex;
             justify-content: center;
@@ -387,7 +411,7 @@
                     align-items: flex-start;
         
                     .span{
-                        font-size: 4rem;
+                        font-size: 5rem;
                         font-weight: 300;
                         text-transform: uppercase;
                         font-family: Helvetica;
@@ -401,7 +425,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -424,110 +448,122 @@
                 }
             }
         
-            .fotoGalerie__images{
-                width: 100%;
+            .fotoGalerie__gallery{
+                width: 80%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     position: relative;
-                    flex-wrap: wrap;
                     gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 35vw;
-                        height: 80vh;
-                        position: relative;
+                    
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 25vw;
+                            height: 60vh;
+                            position: relative;
                             display: flex;
+                            justify-content: center;
                             align-items: flex-end;
-                            justify-content: space-between;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            h2{
-                                font-size: 2rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            cursor:crosshair;
+
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.5rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 1vh;
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -539,7 +575,198 @@
     @media only screen and (min-width: 1420px) and (max-width: 1596px) and (min-height: 750px) {
         .fotoGalerie{
             width: 100vw;
-            height: 400vh;
+            height: 300vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 25vh 5vw 20vh 5vw;
+            background-color: #EDEFF3;
+        
+            .fotoGalerie__header{
+                position: absolute;
+                top: 15vh;
+                left: 2.5vw;
+                width: 25%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+        
+                h1{
+                    margin: 0;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+        
+                    .span{
+                        font-size: 5rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .fotoGalerie__cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .fotoGalerie__gallery{
+                width: 80%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 0vh 0;
+        
+                .fotoGalerie__gallery__container{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    position: relative;
+                    gap: 2.5vw;
+                    
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 25vw;
+                            height: 60vh;
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            cursor:crosshair;
+
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
+                                }
+                            }
+            
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
+                                overflow: hidden;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 1vh;
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
+        .fotoGalerie{
+            width: 100vw;
+            height: 300vh;
             position: relative;
             display: flex;
             justify-content: center;
@@ -580,7 +807,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -596,296 +823,129 @@
                 background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
         
                 p{
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                     font-weight: 300;
                     color: #fff;
                     margin: 0;
                 }
             }
         
-            .fotoGalerie__images{
-                width: 100%;
+            .fotoGalerie__gallery{
+                width: 80%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     position: relative;
-                    flex-wrap: wrap;
                     gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 35vw;
-                        height: 80vh;
-                        position: relative;
+                    
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 25vw;
+                            height: 60vh;
+                            position: relative;
                             display: flex;
+                            justify-content: center;
                             align-items: flex-end;
-                            justify-content: space-between;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            h2{
-                                font-size: 2rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            cursor:crosshair;
+
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.5rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    @media only screen and (min-width: 1260px) and (max-width: 1420px) {
-        .fotoGalerie{
-            width: 100vw;
-            height: 400vh;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 25vh 5vw 20vh 5vw;
-            background-color: #EDEFF3;
-        
-            .fotoGalerie__header{
-                position: absolute;
-                top: 15vh;
-                left: 2.5vw;
-                width: 25%;
-                height: 40vh;
-                display: flex;
-                justify-content: flex-start;
-                align-items: flex-start;
-        
-                h1{
-                    margin: 0;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-        
-                    .span{
-                        font-size: 3.5rem;
-                        font-weight: 300;
-                        text-transform: uppercase;
-                        font-family: Helvetica;
-                        margin: 0;
-                        background: linear-gradient(90deg, #0F4A57, #039ca4);
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                        color: transparent;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
-            }
-        
-            .cursor{
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100px;
-                height: 100px;
-                z-index: 10;
-                background-color: #0F4A57;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                pointer-events: none;
-                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
-        
-                p{
-                    font-size: 1.2rem;
-                    font-weight: 300;
-                    color: #fff;
-                    margin: 0;
-                }
-            }
-        
-            .fotoGalerie__images{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                padding: 0vh 0;
-        
-                .fotoGalerie__images__container{
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
-                    position: relative;
-                    flex-wrap: wrap;
-                    gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 35vw;
-                        height: 80vh;
-                        position: relative;
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
                                 width: 100%;
                                 height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
-                            display: flex;
-                            align-items: flex-end;
-                            justify-content: space-between;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            h2{
-                                font-size: 1.6rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                                 }
+            
                             }
             
-                            p{
-                                font-size: 1.1rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
                                 display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 1vh;
+                                h2{
+                                    font-size: 1.6rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.2rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -897,7 +957,7 @@
     @media only screen and (min-width: 960px) and (max-width: 1240px) {
         .fotoGalerie{
             width: 100vw;
-            height: 350vh;
+            height: 250vh;
             position: relative;
             display: flex;
             justify-content: center;
@@ -938,7 +998,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -954,117 +1014,129 @@
                 background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
         
                 p{
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                     font-weight: 300;
                     color: #fff;
                     margin: 0;
                 }
             }
         
-            .fotoGalerie__images{
-                width: 100%;
+            .fotoGalerie__gallery{
+                width: 80%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     position: relative;
-                    flex-wrap: wrap;
                     gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 32.5vw;
-                        height: 70vh;
-                        position: relative;
+                    
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 25vw;
+                            height: 50vh;
+                            position: relative;
                             display: flex;
+                            justify-content: center;
                             align-items: flex-end;
-                            justify-content: space-between;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            h2{
-                                font-size: 1.4rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            cursor:crosshair;
+
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 1vh;
+                                h2{
+                                    font-size: 1.4rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -1074,187 +1146,6 @@
         }
     }
     @media only screen and (min-width: 701px ) and (max-width: 950px) and (min-height: 280px) and (max-height: 600px) {
-        .fotoGalerie{
-            width: 100vw;
-            height: 500vh;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 25vh 5vw 20vh 5vw;
-            background-color: #EDEFF3;
-        
-            .fotoGalerie__header{
-                position: absolute;
-                top: 15vh;
-                left: 2.5vw;
-                width: 25%;
-                height: 40vh;
-                display: flex;
-                justify-content: flex-start;
-                align-items: flex-start;
-        
-                h1{
-                    margin: 0;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-        
-                    .span{
-                        font-size: 2.5rem;
-                        font-weight: 300;
-                        text-transform: uppercase;
-                        font-family: Helvetica;
-                        margin: 0;
-                        background: linear-gradient(90deg, #0F4A57, #039ca4);
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                        color: transparent;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
-            }
-        
-            .cursor{
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100px;
-                height: 100px;
-                z-index: 10;
-                background-color: #0F4A57;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                pointer-events: none;
-                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
-        
-                p{
-                    font-size: 1.2rem;
-                    font-weight: 300;
-                    color: #fff;
-                    margin: 0;
-                }
-            }
-        
-            .fotoGalerie__images{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                padding: 0vh 0;
-        
-                .fotoGalerie__images__container{
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
-                    position: relative;
-                    flex-wrap: wrap;
-                    gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 32.5vw;
-                        height: 90vh;
-                        position: relative;
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-end;
-                            flex-direction: column;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            gap: 0.5vh;
-                            h2{
-                                font-size: 1.4rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
-                                }
-                            }
-            
-                            p{
-                                font-size: 1rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    @media only screen and (min-width: 500px ) and (max-width: 700px) and (min-height: 200px) and (max-height: 380px) {
         .fotoGalerie{
             width: 100vw;
             height: 450vh;
@@ -1298,7 +1189,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -1314,119 +1205,320 @@
                 background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
         
                 p{
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                     font-weight: 300;
                     color: #fff;
                     margin: 0;
                 }
             }
         
-            .fotoGalerie__images{
-                width: 100%;
+            .fotoGalerie__gallery{
+                width: 80%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     position: relative;
-                    flex-wrap: wrap;
                     gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 32.5vw;
-                        height: 90vh;
-                        position: relative;
+                    
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 30vw;
+                            height: 100vh;
+                            position: relative;
                             display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-end;
-                            flex-direction: column;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            gap: 0.5vh;
-                            h2{
-                                font-size: 1.4rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            justify-content: center;
+                            align-items: flex-end;
+                            cursor:crosshair;
+
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 1vh;
+                                h2{
+                                    font-size: 1.4rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 500px ) and (max-width: 700px) and (min-height: 200px) and (max-height: 380px) {
+        .fotoGalerie{
+            width: 100vw;
+            height: 450vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 25vh 5vw 20vh 5vw;
+            background-color: #EDEFF3;
+        
+            .fotoGalerie__header{
+                position: absolute;
+                top: 15vh;
+                left: 2.5vw;
+                width: 25%;
+                height: 40vh;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+        
+                h1{
+                    margin: 0;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+        
+                    .span{
+                        font-size: 2rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        font-family: Helvetica;
+                        margin: 0;
+                        background: linear-gradient(90deg, #0F4A57, #039ca4);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        
+            .fotoGalerie__cursor{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                z-index: 10;
+                background-color: #0F4A57;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: none;
+                background: linear-gradient(90deg, #0F4A57, #039ca4, #0F4A57);
+        
+                p{
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+        
+            .fotoGalerie__gallery{
+                width: 80%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 0vh 0;
+        
+                .fotoGalerie__gallery__container{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    position: relative;
+                    gap: 2.5vw;
+                    
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 30vw;
+                            height: 100vh;
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            cursor:crosshair;
+
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
+                                }
+                            }
+            
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
+                                overflow: hidden;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 1vh;
+                                h2{
+                                    font-size: 1.4rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.1rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -1441,12 +1533,12 @@
     @media only screen and (min-width: 1000px) {
         .fotoGalerie{
             width: 100vw;
-            height: 250vh;
+            height: 200vh;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 25vh 5vw 20vh 5vw;
+            padding: 0vh 5vw 20vh 5vw;
             background-color: #EDEFF3;
         
             .fotoGalerie__header{
@@ -1482,7 +1574,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -1505,7 +1597,7 @@
                 }
             }
         
-            .fotoGalerie__images{
+            .fotoGalerie__gallery{
                 width: 100%;
                 height: 100%;
                 display: flex;
@@ -1513,105 +1605,115 @@
                 align-items: flex-start;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     position: relative;
-                    flex-wrap: wrap;
-                    gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 37.5vw;
-                        height: 65vw;
-                        position: relative;
+                    gap: 1vw;
+
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-end;
-                            flex-direction: column;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            gap: 0.5vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
 
-                            h2{
-                                font-size: 2rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                        .fotoGalerie__column__item{
+                            width: 27.5vw;
+                            height: 40vw;
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            cursor:crosshair;
+            
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.5rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-end;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 0.5vh;
+    
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -1623,12 +1725,12 @@
     @media only screen and (min-width: 600px) and (max-width: 990px) and (min-height: 800px) {
         .fotoGalerie{
             width: 100vw;
-            height: 250vh;
+            height: 180vh;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 25vh 5vw 20vh 5vw;
+            padding: 15vh 5vw 20vh 5vw;
             background-color: #EDEFF3;
         
             .fotoGalerie__header{
@@ -1650,7 +1752,7 @@
                     align-items: flex-start;
         
                     .span{
-                        font-size: 3rem;
+                        font-size: 4rem;
                         font-weight: 300;
                         text-transform: uppercase;
                         font-family: Helvetica;
@@ -1664,7 +1766,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -1687,7 +1789,7 @@
                 }
             }
         
-            .fotoGalerie__images{
+            .fotoGalerie__gallery{
                 width: 100%;
                 height: 100%;
                 display: flex;
@@ -1695,104 +1797,115 @@
                 align-items: flex-start;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     position: relative;
-                    flex-wrap: wrap;
-                    gap: 2.5vw;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 37.5vw;
-                        height: 65vw;
-                        position: relative;
+                    gap: 1vw;
+
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 27.5vw;
+                            height: 40vw;
+                            position: relative;
                             display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-end;
-                            flex-direction: column;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            gap: 0.5vh;
-                            h2{
-                                font-size: 1.8rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            justify-content: center;
+                            align-items: flex-end;
+                            cursor:crosshair;
+            
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.3rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-end;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 0.5vh;
+    
+                                h2{
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -1804,29 +1917,30 @@
     @media only screen and (min-width: 400px) and (max-width: 600px) and (min-height: 700px) {
         .fotoGalerie{
             width: 100vw;
-            height: 750vh;
+            height: 500vh;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 25vh 5vw 20vh 5vw;
+            padding: 35vh 5vw 20vh 5vw;
             background-color: #EDEFF3;
         
             .fotoGalerie__header{
                 position: absolute;
-                top: 20vh;
+                top: 10vh;
                 left: 2.5vw;
                 width: 25%;
                 height: 40vh;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
+                z-index: 25;
         
                 h1{
                     margin: 0;
                     position: relative;
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
         
@@ -1845,7 +1959,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -1868,112 +1982,125 @@
                 }
             }
         
-            .fotoGalerie__images{
+            .fotoGalerie__gallery{
                 width: 100%;
                 height: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: flex-start;
+                justify-content: flex-start;
+                align-items: center;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
+                    justify-content: flex-start;
+                    align-items: center;
                     position: relative;
-                    flex-wrap: wrap;
-                    gap: 2.5vh;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 70vw;
-                        height: 120vw;
-                        position: relative;
+                    flex-direction: column;
+                    gap: 1vw;
+
+
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 75vw;
+                            height: 120vw;
+                            position: relative;
                             display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-end;
-                            flex-direction: column;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            gap: 0.5vh;
-                            h2{
-                                font-size: 1.6rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            justify-content: center;
+                            align-items: flex-end;
+                            cursor:crosshair;
+            
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.2rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-end;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 0.5vh;
+    
+                                h2{
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -1985,29 +2112,30 @@
     @media only screen and (min-width: 380px) and (max-width: 399px) and (min-height: 600px) {
         .fotoGalerie{
             width: 100vw;
-            height: 550vh;
+            height: 500vh;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 25vh 5vw 20vh 5vw;
+            padding: 35vh 5vw 20vh 5vw;
             background-color: #EDEFF3;
         
             .fotoGalerie__header{
                 position: absolute;
-                top: 15vh;
+                top: 10vh;
                 left: 2.5vw;
                 width: 25%;
                 height: 40vh;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
+                z-index: 25;
         
                 h1{
                     margin: 0;
                     position: relative;
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
         
@@ -2026,7 +2154,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -2049,112 +2177,125 @@
                 }
             }
         
-            .fotoGalerie__images{
+            .fotoGalerie__gallery{
                 width: 100%;
                 height: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: flex-start;
+                justify-content: flex-start;
+                align-items: center;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
+                    justify-content: flex-start;
+                    align-items: center;
                     position: relative;
-                    flex-wrap: wrap;
-                    gap: 2.5vh;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 70vw;
-                        height: 120vw;
-                        position: relative;
+                    flex-direction: column;
+                    gap: 1vw;
+
+
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 75vw;
+                            height: 120vw;
+                            position: relative;
                             display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-end;
-                            flex-direction: column;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            gap: 0.5vh;
-                            h2{
-                                font-size: 1.6rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            justify-content: center;
+                            align-items: flex-end;
+                            cursor:crosshair;
+            
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.2rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-end;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 0.5vh;
+    
+                                h2{
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
@@ -2166,29 +2307,30 @@
     @media only screen and (min-width: 320px) and (max-width: 379px) and (min-height: 450px) {
         .fotoGalerie{
             width: 100vw;
-            height: 650vh;
+            height: 550vh;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 25vh 5vw 20vh 5vw;
+            padding: 35vh 5vw 20vh 5vw;
             background-color: #EDEFF3;
         
             .fotoGalerie__header{
                 position: absolute;
-                top: 15vh;
+                top: 10vh;
                 left: 2.5vw;
                 width: 25%;
                 height: 40vh;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
+                z-index: 25;
         
                 h1{
                     margin: 0;
                     position: relative;
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: flex-start;
                     align-items: flex-start;
         
@@ -2207,7 +2349,7 @@
                 }
             }
         
-            .cursor{
+            .fotoGalerie__cursor{
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -2230,112 +2372,125 @@
                 }
             }
         
-            .fotoGalerie__images{
+            .fotoGalerie__gallery{
                 width: 100%;
                 height: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: flex-start;
+                justify-content: flex-start;
+                align-items: center;
                 padding: 0vh 0;
         
-                .fotoGalerie__images__container{
+                .fotoGalerie__gallery__container{
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
+                    justify-content: flex-start;
+                    align-items: center;
                     position: relative;
-                    flex-wrap: wrap;
-                    gap: 2.5vh;
-        
-                    .fotoGalerie__images__container__item{
-                        width: 70vw;
-                        height: 120vw;
-                        position: relative;
+                    flex-direction: column;
+                    gap: 1vw;
+
+
+                    .fotoGalerie__column{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
-                        cursor:crosshair;
-        
-                        &:hover{
-                            .fotoGalerie__images__container__item__image__container{
-                                .fotoGalerie__images__container__item__image{
-                                    transform: scale(1.025);
-                                }
-                            }
-                        }
-        
-                        .fotoGalerie__images__container__item__image__container{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            overflow: hidden;
-        
-                            .fotoGalerie__images__container__item__image{
-                                width: 100%;
-                                height: 100%;
-                                scale: 1.2;
-                                object-fit: cover;
-                                transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                            }
-        
-                        }
-        
-        
-                        .fotoGalerie__images__container__item__text__container{
-                            width: 100%;
-                            height: 15vh;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        position: relative;
+                        gap: 2.5vw;
+
+                        .fotoGalerie__column__item{
+                            width: 75vw;
+                            height: 120vw;
+                            position: relative;
                             display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-end;
-                            flex-direction: column;
-                            z-index: 1;
-                            padding: 2.5vh 2.5vw;
-                            gap: 0.5vh;
-                            h2{
-                                font-size: 1.6rem;
-                                font-weight: 300;
-                                text-transform: uppercase;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+                            justify-content: center;
+                            align-items: flex-end;
+                            cursor:crosshair;
+            
+                            &:hover{
+                                .fotoGalerie__column__item__image-container{
+                                    .fotoGalerie__column__item__image{
+                                        transform: scale(1.025);
+                                    }
                                 }
                             }
             
-                            p{
-                                font-size: 1.2rem;
-                                font-weight: 300;
-                                text-transform: capitalize;
-                                font-family: Helvetica;
-                                margin: 0;
-                                color: #fff;
-                                display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
+                            .fotoGalerie__column__item__image-container{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 0;
                                 overflow: hidden;
-                                span{
-                                    display: inline-block;
-                                    position: relative;
-                                    background: linear-gradient(90deg, #FFF, #039ca4);
-                                    -webkit-background-clip: text;
-                                    background-clip: text;
-                                    color: transparent;
-                                    -webkit-text-fill-color: transparent;
+            
+                                .fotoGalerie__column__item__image{
+                                    width: 100%;
+                                    height: 100%;
+                                    scale: 1.2;
+                                    object-fit: cover;
+                                    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                                }
+            
+                            }
+            
+            
+                            .fotoGalerie__column__item__text-container{
+                                width: 100%;
+                                height: 15vh;
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: flex-end;
+                                flex-direction: column;
+                                z-index: 1;
+                                padding: 2.5vh 2.5vw;
+                                gap: 0.5vh;
+    
+                                h2{
+                                    font-size: 1.3rem;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
+                                }
+                
+                                p{
+                                    font-size: 1rem;
+                                    font-weight: 300;
+                                    text-transform: capitalize;
+                                    font-family: Helvetica;
+                                    margin: 0;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    overflow: hidden;
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        background: linear-gradient(90deg, #FFF, #039ca4);
+                                        -webkit-background-clip: text;
+                                        background-clip: text;
+                                        color: transparent;
+                                        -webkit-text-fill-color: transparent;
+                                    }
                                 }
                             }
                         }
