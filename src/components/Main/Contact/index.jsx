@@ -9,7 +9,7 @@ import { toast } from "sonner";
 
 const contactInfo = [
     {
-        title: 'obchodní zástupce',
+        title: 'Provozovatel',
         text: 'Pavel Kovanda',
     },
     {

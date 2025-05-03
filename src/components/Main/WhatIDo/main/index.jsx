@@ -12,13 +12,13 @@ const listWID = [
     },
     {
         number: '02',
-        title: 'Montujeme BMT',
+        title: 'Montujeme BMT - Bytový měřič tepla',
         src: '/images/horizontal.png',
         alt: 'BMT jednotka',
     },
     {
         number: '03',
-        title: 'Montujeme RTN',
+        title: 'Montujeme RTN - Rozdělovač topných nákladů',
         src: '/images/horizontal.png',
         alt: 'RTN jednotka',
     },

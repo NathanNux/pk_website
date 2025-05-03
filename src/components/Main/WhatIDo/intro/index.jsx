@@ -56,17 +56,18 @@ const Intro = () => {
         <div className="WID__intro">
             <div className="WID__intro__text">
                 <h2>
-                    <SplitWords text='mám praxi už téměř' variant={titleAnim}/>
+                    <SplitWords text='Instalujeme od roku' variant={titleAnim}/>
                 </h2>
                 <h2>
-                    <SplitWords text= 'dvě dekády' variant={titleAnim}/>
+                    <SplitWords text= '2008' variant={titleAnim}/> 
+                    {/* Zvětšit text na víc rem */}
                 </h2>
             </div>
-            <div className="WID__intro__desc">
+            {/* <div className="WID__intro__desc">
                 <p className='WID__intro__desc__text'>
                     <SplitWords text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco' variant={wordAnim}/>
                 </p>
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -197,7 +197,7 @@ export default function Intro() {
                     <div className="divider"/>
                 </div>
                 <div className="intro__main__trafika__text__link">
-                    <Link href="https://www.facebook.com"
+                    <Link href="https://www.facebook.com/profile.php?id=61557461697885"
                         onMouseEnter={() => setActive(true)}
                         onMouseLeave={() => setActive(false)}
                     >
@@ -224,7 +224,7 @@ export default function Intro() {
                         <SplitWords text="Zapojte se do naši ankety a hlasujte, jaký nový produkt naši trafice budete chtít jako další." variants={wordAnim} />
                     </p>
                 </div>
-                <Link href="/htttps://www.facebook.com"
+                <Link href="https://www.facebook.com/profile.php?id=61557461697885"
                     onMouseEnter={() => setActiveArrow(true)}
                     onMouseLeave={() => setActiveArrow(false)}
                 >
@@ -265,6 +265,26 @@ export default function Intro() {
                         </motion.div>
                     </div>
                 </Link>
+
+                {/* kontakt na trafiky (tel. cislo (725 141 929)) a Paju (tel.cislo) potom stylyzovat */}
+                <div className="intro__main__trafika__content__contact">
+                    <div className="intro__main__trafika__content__contact__text">
+                        <p>
+                            <SplitWords text="Kontakt na trafiku" variants={wordAnim} />
+                        </p>
+                        <p>
+                            <SplitWords text="+420 725 141 929" variants={wordAnim} />
+                        </p>
+                    </div>  
+                    <div className="intro__main__trafika__content__contact__text">
+                        <p>
+                            <SplitWords text="Kontakt na mě" variants={wordAnim} />
+                        </p>
+                        <p>
+                            <SplitWords text="+420 602 175 680" variants={wordAnim} />
+                        </p>
+                    </div>  
+                </div>
             </div>
         </section>
     )

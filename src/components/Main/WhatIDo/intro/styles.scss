@@ -28,7 +28,7 @@
                     align-items: flex-start;
         
                     span{
-                        font-size: 5rem;
+                        font-size: 6rem;
                         font-weight: 400;
                         text-transform: uppercase;
                         margin: 0;
@@ -38,6 +38,17 @@
                         background-clip: text;
                         color: transparent;
                         -webkit-text-fill-color: transparent;
+                    }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 10rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }
@@ -86,7 +97,7 @@
             overflow: hidden;
         
             .WID__intro__text{
-                width: 100%;
+                width: 80%;
                 height: 35%;
                 display: flex;
                 flex-direction: row;
@@ -101,7 +112,7 @@
                     align-items: flex-start;
         
                     span{
-                        font-size: 5rem;
+                        font-size: 6rem;
                         font-weight: 400;
                         text-transform: uppercase;
                         margin: 0;
@@ -112,7 +123,20 @@
                         color: transparent;
                         -webkit-text-fill-color: transparent;
                     }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 10rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
                 }
+
+                
             }
                 .WID__intro__desc {
                 width: 60%;
@@ -184,6 +208,17 @@
                         background-clip: text;
                         color: transparent;
                         -webkit-text-fill-color: transparent;
+                    }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 8rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }
@@ -258,6 +293,17 @@
                         color: transparent;
                         -webkit-text-fill-color: transparent;
                     }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 8rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
                 }
             }
                 .WID__intro__desc {
@@ -330,6 +376,17 @@
                         background-clip: text;
                         color: transparent;
                         -webkit-text-fill-color: transparent;
+                    }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 6rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }
@@ -404,6 +461,17 @@
                         color: transparent;
                         -webkit-text-fill-color: transparent;
                     }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 6rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
                 }
             }
                 .WID__intro__desc {
@@ -476,6 +544,17 @@
                         background-clip: text;
                         color: transparent;
                         -webkit-text-fill-color: transparent;
+                    }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 4rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }
@@ -550,6 +629,17 @@
                         color: transparent;
                         -webkit-text-fill-color: transparent;
                     }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 3rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
                 }
             }
                 .WID__intro__desc {
@@ -600,7 +690,7 @@
             overflow: hidden;
         
             .WID__intro__text{
-                width: 100%;
+                width: 80%;
                 height: 35%;
                 display: flex;
                 flex-direction: row;
@@ -615,7 +705,7 @@
                     align-items: flex-start;
         
                     span{
-                        font-size: 5rem;
+                        font-size: 4rem;
                         font-weight: 400;
                         text-transform: uppercase;
                         margin: 0;
@@ -626,9 +716,20 @@
                         color: transparent;
                         -webkit-text-fill-color: transparent;
                     }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 6rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
                 }
             }
-                .WID__intro__desc {
+            .WID__intro__desc {
                 width: 80%;
                 height: auto; 
                 display: flex;
@@ -673,7 +774,7 @@
             overflow: hidden;
         
             .WID__intro__text{
-                width: 100%;
+                width: 80%;
                 height: 35%;
                 display: flex;
                 flex-direction: row;
@@ -688,7 +789,7 @@
                     align-items: flex-start;
         
                     span{
-                        font-size: 4rem;
+                        font-size: 3rem;
                         font-weight: 400;
                         text-transform: uppercase;
                         margin: 0;
@@ -698,6 +799,17 @@
                         background-clip: text;
                         color: transparent;
                         -webkit-text-fill-color: transparent;
+                    }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 4rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }
@@ -735,14 +847,14 @@
     @media only screen and (min-width: 400px) and (max-width: 600px) and (min-height: 700px) {
         .WID__intro{
             width: 100vw;
-            height: 110vh;
+            height: 60vh;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             position: relative;
             gap: 2.5vw;
-            padding: 5vh 5vw 5vh 5vw;
+            padding: 10vh 5vw 5vh 5vw;
             overflow: hidden;
         
             .WID__intro__text{
@@ -761,7 +873,7 @@
                     align-items: flex-start;
         
                     span{
-                        font-size: 4rem;
+                        font-size: 2.5rem;
                         font-weight: 400;
                         text-transform: uppercase;
                         margin: 0;
@@ -771,6 +883,17 @@
                         background-clip: text;
                         color: transparent;
                         -webkit-text-fill-color: transparent;
+                    }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 4rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }
@@ -808,14 +931,14 @@
     @media only screen and (min-width: 380px) and (max-width: 399px) and (min-height: 600px) {
         .WID__intro{
             width: 100vw;
-            height: 120vh;
+            height: 60vh;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             position: relative;
             gap: 2.5vw;
-            padding: 5vh 5vw 5vh 5vw;
+            padding: 10vh 5vw 5vh 5vw;
             overflow: hidden;
         
             .WID__intro__text{
@@ -834,7 +957,7 @@
                     align-items: flex-start;
         
                     span{
-                        font-size: 4rem;
+                        font-size: 2.5rem;
                         font-weight: 400;
                         text-transform: uppercase;
                         margin: 0;
@@ -844,6 +967,17 @@
                         background-clip: text;
                         color: transparent;
                         -webkit-text-fill-color: transparent;
+                    }
+                    &:nth-of-type(2){
+                        span{ 
+                            font-size: 4rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }
@@ -881,14 +1015,14 @@
     @media only screen and (min-width: 320px) and (max-width: 379px) and (min-height: 450px) {
         .WID__intro{
             width: 100vw;
-            height: 160vh;
+            height: 80vh;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             position: relative;
             gap: 2.5vw;
-            padding: 5vh 5vw 5vh 5vw;
+            padding: 10vh 5vw 5vh 5vw;
             overflow: hidden;
         
             .WID__intro__text{
@@ -907,7 +1041,7 @@
                     align-items: flex-start;
         
                     span{
-                        font-size: 3rem;
+                        font-size: 2.5rem;
                         font-weight: 400;
                         text-transform: uppercase;
                         margin: 0;
@@ -917,6 +1051,17 @@
                         background-clip: text;
                         color: transparent;
                         -webkit-text-fill-color: transparent;
+                    }
+                    &:nth-of-type(2){
+                        span{
+                            font-size: 3rem;
+                            // Text gradient implementation
+                            background: linear-gradient(90deg, #0F4A57, #039ca4);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
                 }
             }

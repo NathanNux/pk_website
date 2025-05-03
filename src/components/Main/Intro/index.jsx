@@ -195,7 +195,8 @@ export default function MainIntro () {
             </div>
             <div className="main__intro__description">
                 <p>
-                    <SplitWords text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco" variant={ slideLoad ? wordAnim : wordAnim2}/>
+                    <SplitWords text="Instalace měřidel." variant={ slideLoad ? wordAnim : wordAnim2}/>
+                    {/*  */}
                 </p>
                 <motion.div
                     variants={slideLoad ? buttonAnim : buttonAnim2}

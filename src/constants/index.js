@@ -2,50 +2,50 @@ export const fotoGaleriePics = [
     {
         id: 1,
         src: "/images/galerie/1.webp",
-        alt: "FotoGalerie 1",
-        title: "FotoGalerie 1",
-        desc: "FotoGalerie 1"
+        alt: "radiator krok 1",
+        title: "Montáž RTN 1 - Deskový Radiátor",
+        desc: "instalace RTN - Rozdělovač topných nákladů"
     },
     {
         id: 2,
         src: "/images/galerie/2.webp",
-        alt: "FotoGalerie 2",
-        title: "FotoGalerie 2",
-        desc: "FotoGalerie 2"
+        alt: "radiator krok 2",
+        title: "Montáž RTN 2 - Deskový Radiátor",
+        desc: "Instalace RTN - Rozdělovač topných nákladů"
     },
     {
         id: 3,
         src: "/images/galerie/3.webp",
-        alt: "FotoGalerie 3",
-        title: "FotoGalerie 3",
-        desc: "FotoGalerie 3"
+        alt: "radiator krok 3",
+        title: "Montáž RTN 3 - Deskový  Radiátor",
+        desc: "Instalace RTN - Rozdělovač topných nákladů"
     },
     {
         id: 4,
         src: "/images/galerie/4.webp",
-        alt: "FotoGalerie 4",
-        title: "FotoGalerie 4",
-        desc: "FotoGalerie 4"
+        alt: "radiator krok 4",
+        title: "Montáž RTN 4 - Deskový Radiátor",
+        desc: "Instalace RTN - Rozdělovač topných nákladů"
     },
     {
         id: 5,
         src: "/images/galerie/5.webp",
-        alt: "FotoGalerie 5",
-        title: "FotoGalerie 5",
-        desc: "FotoGalerie 5"
+        alt: "radiator krok 1",
+        title: "Montáž RTN 1 - Žebrový Radiátor",
+        desc: "Instalace RTN - Rozdělovač topných nákladů"
     },
     {
         id: 6,
         src: "/images/galerie/6.webp",
-        alt: "FotoGalerie 6",
-        title: "FotoGalerie 6",
-        desc: "FotoGalerie 6"
+        alt: "radiator krok 2",
+        title: "Montáž RTN 2 - Žebrový Radiátor",
+        desc: "Instalace RTN - Rozdělovač topných nákladů"
     },
     {
         id: 7,
         src: "/images/galerie/7.webp",
-        alt: "FotoGalerie 7",
-        title: "FotoGalerie 7",
-        desc: "FotoGalerie 7"
+        alt: "radiator krok 3",
+        title: "Montáž RTN 3 - Žebrový Radiátor",
+        desc: "Instalace RTN - Rozdělovač topných nákladů"
     },
 ]
