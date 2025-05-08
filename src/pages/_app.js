@@ -13,6 +13,7 @@ import Lenis from "lenis";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function App({ Component, pageProps }) {
@@ -65,6 +66,7 @@ export default function App({ Component, pageProps }) {
             }}
           >
               <Transition key={router.pathname}>
+                <Analytics />
                 <Component {...pageProps} />
                 <Footer ref={footerRef} />
               </Transition>
