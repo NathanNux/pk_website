@@ -2759,6 +2759,7 @@
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
+                    position: relative;
                     h3{
                         width: 100%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
@@ -2861,6 +2862,7 @@
                 justify-content: flex-start;
                 align-items: flex-end;
                 flex-direction: column;
+                position: relative;
                 padding: 0 1vw;
                 gap: 2.5vh;
         
@@ -2870,6 +2872,8 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-start;
+                    position: relative;
+                    position: relative;
                 
                     p {
                         width: 100%; // Changed from 50% to 100%
@@ -2985,6 +2989,7 @@
                         justify-content: flex-start;
                         align-items: flex-start;
                         flex-direction: column;
+                        position: relative;
                         gap: 0.5rem;
                         p{
                             width: 100%; // Changed from 50% to 100%
@@ -3156,6 +3161,7 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-start;
+                    position: relative;
                 
                     p {
                         width: 100%; // Changed from 50% to 100%
@@ -3228,6 +3234,7 @@
                         justify-content: center;
                         align-items: center;
                         position: relative;
+                        position: relative;
                         .intro__main__trafika__content__arrow__icon{
                             width: 100%;
                             height: 100%;
@@ -3271,6 +3278,7 @@
                         justify-content: flex-start;
                         align-items: flex-start;
                         flex-direction: column;
+                        position: relative;
                         gap: 0.5rem;
                         p{
                             width: 100%; // Changed from 50% to 100%
