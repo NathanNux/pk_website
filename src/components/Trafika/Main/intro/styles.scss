@@ -2739,9 +2739,12 @@
             flex-direction: column;
             padding: 15vh 5vw 0 5vw;
             z-index: 2;
+            overflow-x: hidden;
+
         
             .intro__main__trafika__text{
                 width: 100%;
+                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 60%;
                 display: flex;
                 justify-content: flex-start;
@@ -2750,6 +2753,7 @@
                 gap: 10vw;
                 .intro__main__trafika__text__title{
                     width: 90%;
+                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 40%;
                     display: flex;
                     justify-content: center;
@@ -2794,6 +2798,7 @@
         
                 .intro__main__trafika__text__link{
                     width: 90%;
+                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 30%;
                     display: flex;
                     justify-content: flex-start;
@@ -2850,6 +2855,7 @@
         
             .intro__main__trafika__content{
                 width: 90%;
+                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 100%;
                 display: flex;
                 justify-content: flex-start;
@@ -3016,22 +3022,28 @@
             flex-direction: column;
             padding: 15vh 5vw 0 5vw;
             z-index: 2;
+            overflow-x: hidden;
+
         
             .intro__main__trafika__text{
                 width: 100%;
+                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 60%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 flex-direction: column;
+                position: relative;
                 gap: 10vw;
                 .intro__main__trafika__text__title{
                     width: 90%;
+                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 40%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
+                    position: relative;
                     h3{
                         width: 100%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
@@ -3071,6 +3083,7 @@
         
                 .intro__main__trafika__text__link{
                     width: 90%;
+                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 30%;
                     display: flex;
                     justify-content: flex-start;
@@ -3127,11 +3140,13 @@
         
             .intro__main__trafika__content{
                 width: 90%;
+                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-end;
                 flex-direction: column;
+                position: relative;
                 padding: 0 1vw;
                 gap: 2.5vh;
         
@@ -3293,25 +3308,26 @@
             flex-direction: column;
             padding: 15vh 5vw 0 5vw;
             z-index: 2;
-            overflow: hidden;
+            overflow-x: hidden;
+
         
             .intro__main__trafika__text{
-                width: 100vw;
+                width: 100%;
+                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 60%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 flex-direction: column;
-                position: relative;
                 gap: 15vw;
                 .intro__main__trafika__text__title{
-                    width: 90vw;
+                    width: 90%;
+                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 40%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
-                    position: relative;
                     h3{
                         width: 100%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
@@ -3350,7 +3366,7 @@
                 }
         
                 .intro__main__trafika__text__link{
-                    width: 90vw;
+                    width: 90%;
                     height: 30%;
                     display: flex;
                     justify-content: flex-start;
@@ -3406,13 +3422,13 @@
             }
         
             .intro__main__trafika__content{
-                width: 90vw;
+                width: 90%;
+                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-end;
                 flex-direction: column;
-                position: relative;
                 padding: 0 1vw;
                 gap: 2.5vh;
         
