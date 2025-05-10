@@ -2737,14 +2737,12 @@
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
+            overflow: hidden;
             padding: 15vh 5vw 0 5vw;
             z-index: 2;
-            overflow-x: hidden;
-
         
             .intro__main__trafika__text{
                 width: 100%;
-                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 60%;
                 display: flex;
                 justify-content: flex-start;
@@ -2753,13 +2751,11 @@
                 gap: 10vw;
                 .intro__main__trafika__text__title{
                     width: 90%;
-                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 40%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
-                    position: relative;
                     h3{
                         width: 100%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
@@ -2799,7 +2795,6 @@
         
                 .intro__main__trafika__text__link{
                     width: 90%;
-                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 30%;
                     display: flex;
                     justify-content: flex-start;
@@ -2856,27 +2851,24 @@
         
             .intro__main__trafika__content{
                 width: 90%;
-                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-end;
                 flex-direction: column;
-                position: relative;
                 padding: 0 1vw;
                 gap: 2.5vh;
         
                 .intro__main__trafika__content__text {
-                    width: 100%;
+                    width: 50%;
                     height: 50%;
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-start;
                     position: relative;
-                    position: relative;
                 
                     p {
-                        width: 100%; // Changed from 50% to 100%
+                        width: 50%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
                         display: block;
                         text-align: left;
@@ -2989,7 +2981,6 @@
                         justify-content: flex-start;
                         align-items: flex-start;
                         flex-direction: column;
-                        position: relative;
                         gap: 0.5rem;
                         p{
                             width: 100%; // Changed from 50% to 100%
@@ -3025,32 +3016,27 @@
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
+            overflow: hidden;
             padding: 15vh 5vw 0 5vw;
             z-index: 2;
-            overflow-x: hidden;
-
         
             .intro__main__trafika__text{
                 width: 100%;
-                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 60%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 flex-direction: column;
-                position: relative;
                 gap: 10vw;
                 .intro__main__trafika__text__title{
                     width: 90%;
-                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 40%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
-                    position: relative;
                     h3{
-                        width: 100%; // Changed from 50% to 100%
+                        width: 50%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
                         display: block;
                         text-align: left;
@@ -3088,7 +3074,6 @@
         
                 .intro__main__trafika__text__link{
                     width: 90%;
-                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 30%;
                     display: flex;
                     justify-content: flex-start;
@@ -3145,13 +3130,11 @@
         
             .intro__main__trafika__content{
                 width: 90%;
-                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-end;
                 flex-direction: column;
-                position: relative;
                 padding: 0 1vw;
                 gap: 2.5vh;
         
@@ -3161,10 +3144,9 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-start;
-                    position: relative;
                 
                     p {
-                        width: 100%; // Changed from 50% to 100%
+                        width: 50%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
                         display: block;
                         text-align: left;
@@ -3234,7 +3216,6 @@
                         justify-content: center;
                         align-items: center;
                         position: relative;
-                        position: relative;
                         .intro__main__trafika__content__arrow__icon{
                             width: 100%;
                             height: 100%;
@@ -3278,7 +3259,6 @@
                         justify-content: flex-start;
                         align-items: flex-start;
                         flex-direction: column;
-                        position: relative;
                         gap: 0.5rem;
                         p{
                             width: 100%; // Changed from 50% to 100%
@@ -3314,14 +3294,12 @@
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
+            overflow: hidden;
             padding: 15vh 5vw 0 5vw;
             z-index: 2;
-            overflow-x: hidden;
-
         
             .intro__main__trafika__text{
                 width: 100%;
-                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 60%;
                 display: flex;
                 justify-content: flex-start;
@@ -3330,14 +3308,13 @@
                 gap: 15vw;
                 .intro__main__trafika__text__title{
                     width: 90%;
-                    max-width: 100%; /* Ensure it doesn't overflow */
                     height: 40%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
                     h3{
-                        width: 100%; // Changed from 50% to 100%
+                        width: 50%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
                         display: block;
                         text-align: left;
@@ -3431,7 +3408,6 @@
         
             .intro__main__trafika__content{
                 width: 90%;
-                max-width: 100%; /* Ensure it doesn't overflow */
                 height: 100%;
                 display: flex;
                 justify-content: flex-start;
@@ -3448,7 +3424,7 @@
                     align-items: flex-start;
                 
                     p {
-                        width: 100%; // Changed from 50% to 100%
+                        width: 50%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
                         display: block;
                         text-align: left;
