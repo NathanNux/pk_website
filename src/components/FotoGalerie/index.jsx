@@ -5,46 +5,6 @@ import BackgroundGradient from "../common/Backgroundwhite";
 import { useGlobalContext } from "@/context/globalContext";
 import { fotoGaleriePics } from "@/constants";
 
-const SplitText = ({text, isTextHovered, itemIndex, isTouch, Mindex}) => {
-    const textAnimation = {
-        initial: (i) => ({
-            y: isTouch ? 0 : 50,
-            transition: {
-                duration: 0.3,
-                ease: [0.76, 0, 0.24, 1],
-                delay: i * 0.025
-            }
-        }),
-        hover: (i) => ({
-            y: 0,
-            transition: {
-                duration: 0.3,
-                ease: [0.76, 0, 0.24, 1],
-                delay: i * 0.025
-            }
-        })
-    }
-
-    const currentIdentifier = `${Mindex} ${itemIndex}`;
-    const isActive = isTouch || (isTextHovered.active && isTextHovered.index === currentIdentifier);
-
-    return (
-        text.split('').map((char, index) => {
-            return (
-                <motion.span 
-                    key={index} 
-                    variants={textAnimation}
-                    initial="initial"
-                    animate={isActive ? "hover" : "initial"}
-                    custom={index}
-                >
-                    {char === ' ' ? '\u00A0' : char}
-                </motion.span>
-            )
-        })
-    );
-}
-
 const SplitPairs = ({ text, variants }) => {
     const chars = text.split('');
     const pairs = [];
@@ -79,6 +39,73 @@ const SplitPairs = ({ text, variants }) => {
         </>
     )
 }
+
+// New component that splits by words, then characters
+const SplitWordsAndChars = ({text, isTextHovered, itemIndex, isTouch, Mindex}) => {
+    // Animation configuration
+    const charAnimation = {
+        initial: (i) => ({
+            y: isTouch ? 0 : 50,
+            opacity: isTouch ? 1 : 0,
+            transition: {
+                duration: 0.3,
+                ease: [0.76, 0, 0.24, 1],
+                delay: i * 0.025
+            }
+        }),
+        hover: (i) => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.3,
+                ease: [0.76, 0, 0.24, 1],
+                delay: i * 0.025
+            }
+        })
+    };
+
+    const currentIdentifier = `${Mindex} ${itemIndex}`;
+    const isActive = isTouch || (isTextHovered.active && isTextHovered.index === currentIdentifier);
+    
+    // Split text into words
+    const words = text.split(' ');
+    
+    return (
+        <>
+            {words.map((word, wordIndex) => (
+                <span 
+                    key={wordIndex} 
+                    style={{ 
+                        display: 'inline-block', // Keep words flowing in paragraph
+                        marginRight: '0.25em', // Add space between words
+                        overflow: 'hidden' // Hide overflow for animation
+                    }}
+                >
+                    {/* Split each word into characters */}
+                    {word.split('').map((char, charIndex) => {
+                        // Calculate global character index for staggered animation
+                        const globalCharIndex = words
+                            .slice(0, wordIndex)
+                            .reduce((acc, w) => acc + w.length, 0) + charIndex;
+                            
+                        return (
+                            <motion.span 
+                                key={charIndex} 
+                                style={{ display: 'inline-block' }} // Keep chars flowing in word
+                                variants={charAnimation}
+                                initial="initial"
+                                animate={isActive ? "hover" : "initial"}
+                                custom={globalCharIndex}
+                            >
+                                {char}
+                            </motion.span>
+                        );
+                    })}
+                </span>
+            ))}
+        </>
+    );
+};
 
 
 const productAnim = {
@@ -236,7 +263,7 @@ const GalleryColumn = ({ images, y, onMouseEnter, onMouseLeave, isTextHovered, i
                         />
                         <div className="fotoGalerie__column__item__text-container">
                             <h2>
-                                <SplitText 
+                                <SplitWordsAndChars 
                                     text={title} 
                                     isTextHovered={isTouch ? { active: true, index: globalIndex } : isTextHovered}
                                     itemIndex={globalIndex}
@@ -245,7 +272,7 @@ const GalleryColumn = ({ images, y, onMouseEnter, onMouseLeave, isTextHovered, i
                                 />
                             </h2>
                             <p>
-                                <SplitText 
+                                <SplitWordsAndChars 
                                     text={desc} 
                                     isTextHovered={isTouch ? { active: true, index: globalIndex } : isTextHovered}
                                     itemIndex={globalIndex}

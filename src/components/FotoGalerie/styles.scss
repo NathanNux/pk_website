@@ -130,57 +130,55 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
                                 gap: 1vh;
-                                h2{
-                                    font-size: 2rem;
+                                
+                                h2 {
+                                    font-size: 1.3rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.5rem;
+                                
+                                p {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
+                                    
                                     }
                                 }
                             }
@@ -321,57 +319,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
                                 gap: 1vh;
-                                h2{
-                                    font-size: 2rem;
+                                
+                                h2 {
+                                    font-size: 1.3rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.5rem;
+                                
+                                p {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -512,57 +507,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
                                 gap: 1vh;
-                                h2{
-                                    font-size: 1.8rem;
+                                
+                                h2 {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.3rem;
+                                
+                                p {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -703,57 +695,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
                                 gap: 1vh;
-                                h2{
-                                    font-size: 1.8rem;
+                                
+                                h2 {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.3rem;
+                                
+                                p {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -894,57 +883,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
                                 gap: 1vh;
-                                h2{
-                                    font-size: 1.6rem;
+                                
+                                h2 {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.2rem;
+                                
+                                p {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -1085,57 +1071,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
                                 gap: 1vh;
-                                h2{
-                                    font-size: 1.4rem;
+                                
+                                h2 {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.1rem;
+                                
+                                p {
+                                    font-size: 0.7rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -1276,57 +1259,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
                                 gap: 1vh;
-                                h2{
-                                    font-size: 1.4rem;
+                                
+                                h2 {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.1rem;
+                                
+                                p {
+                                    font-size: 0.7rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -1467,57 +1447,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
                                 gap: 1vh;
-                                h2{
-                                    font-size: 1.4rem;
+                                
+                                h2 {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.1rem;
+                                
+                                p {
+                                    font-size: 0.7rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -1661,58 +1638,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
-                                align-items: flex-start;
                                 justify-content: flex-end;
+                                align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
-                                gap: 0.5vh;
-    
-                                h2{
-                                    font-size: 1.8rem;
+                                gap: 1vh;
+                                
+                                h2 {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1.3rem;
+                                
+                                p {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -1853,58 +1826,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
-                                align-items: flex-start;
                                 justify-content: flex-end;
+                                align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
-                                gap: 0.5vh;
-    
-                                h2{
-                                    font-size: 1.3rem;
+                                gap: 1vh;
+                                
+                                h2 {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1rem;
+                                
+                                p {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -2048,58 +2017,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
-                                align-items: flex-start;
                                 justify-content: flex-end;
+                                align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
-                                gap: 0.5vh;
-    
-                                h2{
-                                    font-size: 1.3rem;
+                                gap: 1vh;
+                                
+                                h2 {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1rem;
+                                
+                                p {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -2243,58 +2208,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
-                                align-items: flex-start;
                                 justify-content: flex-end;
+                                align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
-                                gap: 0.5vh;
-    
-                                h2{
-                                    font-size: 1.3rem;
+                                gap: 1vh;
+                                
+                                h2 {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1rem;
+                                
+                                p {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
@@ -2438,58 +2399,54 @@
                             }
             
             
-                            .fotoGalerie__column__item__text-container{
+                            .fotoGalerie__column__item__text-container {
                                 width: 100%;
                                 height: 15vh;
                                 display: flex;
-                                align-items: flex-start;
                                 justify-content: flex-end;
+                                align-items: flex-start;
                                 flex-direction: column;
+                                overflow: hidden;
                                 z-index: 1;
                                 padding: 2.5vh 2.5vw;
-                                gap: 0.5vh;
-    
-                                h2{
-                                    font-size: 1.3rem;
+                                gap: 1vh;
+                                
+                                h2 {
+                                    font-size: 1.1rem;
                                     font-weight: 300;
                                     text-transform: uppercase;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    position: relative;
+                                    line-height: 1; // Added for proper line spacing
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
-                
-                                p{
-                                    font-size: 1rem;
+                                
+                                p {
+                                    font-size: 0.9rem;
                                     font-weight: 300;
                                     text-transform: capitalize;
                                     font-family: Helvetica;
                                     margin: 0;
                                     color: #fff;
-                                    display: flex;
-                                    justify-content: flex-start;
-                                    align-items: center;
-                                    overflow: hidden;
-                                    span{
-                                        display: inline-block;
+                                    display: block; // Changed from flex to block
+                                    text-align: left; // Added for paragraph flow
+                                    line-height: 1; // Added for better readability
+                                    
+                                    span {
+                                        display: inline; // Changed to inline for natural text flow
                                         position: relative;
-                                        background: linear-gradient(90deg, #FFF, #039ca4);
-                                        -webkit-background-clip: text;
-                                        background-clip: text;
-                                        color: transparent;
-                                        -webkit-text-fill-color: transparent;
+                                        color: #fff;
+                                        white-space: normal; // Ensure proper word wrapping
                                     }
                                 }
                             }
