@@ -2756,13 +2756,15 @@
                     align-items: flex-start;
                     flex-direction: column;
                     h3{
-                        width: 100%; // Changed from 50% to 100%
+                        max-width: 90vw; // Changed from 50% to 100%
+                        width: 100%;
                         height: auto; // Changed from 100% to auto
                         display: block;
                         text-align: left;
                         overflow-wrap: break-word; // Add this to handle long words
                         word-wrap: break-word; // Fallback
                         overflow: visible; // Make overflow visible
+                        position: relative;
                         
                 
                         .word {
@@ -2793,7 +2795,7 @@
                 }
         
                 .intro__main__trafika__text__link{
-                    width: 90%;
+                    max-width: 90vw;
                     height: 30%;
                     display: flex;
                     justify-content: flex-start;
@@ -2859,7 +2861,8 @@
                 gap: 2.5vh;
         
                 .intro__main__trafika__content__text {
-                    width: 50%;
+                    max-width: 90vw;
+                    width: 100%;
                     height: 50%;
                     display: flex;
                     justify-content: flex-start;
@@ -2867,7 +2870,7 @@
                     position: relative;
                 
                     p {
-                        width: 50%; // Changed from 50% to 100%
+                        width: 100%; // Changed from 50% to 100%
                         height: auto; // Changed from 100% to auto
                         display: block;
                         text-align: left;
@@ -2875,6 +2878,7 @@
                         overflow-wrap: break-word; // Add this to handle long words
                         word-wrap: break-word; // Fallback
                         overflow: visible; // Make overflow visible
+                        position: relative;
                 
                         .word {
                             display: inline; // Make spans act like normal text
