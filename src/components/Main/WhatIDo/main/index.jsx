@@ -2,6 +2,7 @@ import CTAButton from "@/components/common/Buttons/CTA";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useRouter } from "next/router";
 
 const listWID = [
     {
@@ -119,6 +120,8 @@ const Main = ({modal, setModal}) => {
     const visibleItems = listWID.slice(0, 4);
     const loopStartIndex = 4; // Index where auto-loop starts
     
+    const router = useRouter();
+    
     // State for auto-looping animation
     const [isAutoLooping, setIsAutoLooping] = useState(true); // Start with auto-loop enabled
     const loopTimerRef = useRef(null);
@@ -193,6 +196,10 @@ const Main = ({modal, setModal}) => {
             .fill()
             .map((_, i) => itemRefs.current[i] || React.createRef());
     }, []);
+
+    const onClick = () => {
+        router.push("/contact");
+    }
 
     return (
         <div className="WID__main">
@@ -279,7 +286,7 @@ const Main = ({modal, setModal}) => {
                     })}
                 </div>
                 <div className="WID__main__content__cta">
-                    <CTAButton ctaText="spojte se se mnou" />
+                    <CTAButton ctaText="spojte se se mnou" onClick={onClick}/>
                 </div>
             </div>
         </div>

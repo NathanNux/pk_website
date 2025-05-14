@@ -5,20 +5,20 @@ import { useEffect, useRef, useState } from "react";
 
 const partners = [
     {
-        name: 'jmeno1',
+        name: 'IRTN.cz',
         number: '01',
-        logo: '/vercel.svg',
-        url: 'url',
-        src1: '/images/vertical.png',
-        src2: '/images/horizontal.png',
+        logo: '/logos/irtn.png',
+        url: 'https://irtn.cz/',
+        src1: '/images/IRTNV.png',
+        src2: '/images/IRTNH.png',
     },
     {
-        name: 'jmeno2',
+        name: 'David Petrák',
         number: '02',
         logo: '',
-        url: 'url',
-        src1: '/images/vertical.png',
-        src2: '/images/horizontal.png',
+        url: 'https://www.firmy.cz/detail/13188967-voda-a-topeni-david-petrak-pisek-budejovicke-predmesti.html',
+        src1: '/images/dp_v.jpeg',
+        src2: '/images/dp_h.jpeg',
     }
 ]
 
@@ -154,8 +154,8 @@ const Partners = () => {
                                         <Image 
                                             src={logo} 
                                             alt="logo" 
-                                            width={50}
-                                            height={50}
+                                            width={100}
+                                            height={30}
                                             sizes="25vw"
                                             quality={100}
                                             priority={true}

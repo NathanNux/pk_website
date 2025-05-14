@@ -2,6 +2,7 @@ import CTAButton from "@/components/common/Buttons/CTA";
 import { useGlobalContext } from "@/context/globalContext";
 import { useScroll, useTransform, motion, delay } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useRef } from "react";
 
 // Simple SplitText with span class
@@ -175,11 +176,16 @@ const buttonAnim2 = {
 export default function MainIntro () {
     const containerRef = useRef(null);
     const { slideLoad } = useGlobalContext();
+    const router = useRouter();
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     });
+
+    const onClick = () => {
+        router.push("/contact");
+    }
 
     const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
   return (
@@ -203,7 +209,7 @@ export default function MainIntro () {
                     initial='initial'
                     animate='enter'
                 >
-                    <CTAButton ctaText="kotaktovat" />
+                    <CTAButton ctaText="kotaktovat" onClick={onClick}/>
                 </motion.div>
             </div>
         </div>

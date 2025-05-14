@@ -10,11 +10,11 @@ const listTrafika = [
     },
     {
         text: "Sledujte nás a hlasujte na Facebooku",
-        href: "https://www.facebook.com",
+        href: "https://www.facebook.com/profile.php?id=61557461697885",
     },
     {
         text: "Kde nás najdete",
-        href: "https://www.google.com",
+        href: "https://www.google.com/maps/place/Smrkovick%C3%A1,+397+01+P%C3%ADsek+1/@49.3017542,14.1513649,17.34z/data=!4m6!3m5!1s0x470b4fefcb739951:0xc58b395d794f8ea4!8m2!3d49.301479!4d14.1518531!16s%2Fg%2F1tm11b00?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoASAFQAw%3D%3D",
     }
 ];
 
