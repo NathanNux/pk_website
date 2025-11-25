@@ -6,7 +6,7 @@ const NewProduct = [
     {
         title: "New Product",
         description: "New product description",
-        image: "/images/vertical.png",
+        image: "/images/Trafika.jpg",
     }
 ]
 
@@ -50,12 +50,12 @@ const SplitWords = ({ text, variants }) => {
 const imageAnim = {
     initial: { 
         opacity: 1,
-        height: "60vh",
+        height: "30vh",
         y: -100
     },
     enter: {
         opacity: 1,
-        height: "80vh",
+        height: "50vh",
         y: 0,
         transition: {
             duration: 1,
